@@ -42,6 +42,13 @@ To ensure that MongoDB is installed correctly and running, you can connect to th
 mongosh
 ```
 
+## Install MongoDB Compass
+MongoDB Compass is a powerful GUI for querying, aggregating, and analyzing your MongoDB data in a visual environment:
+```bash
+brew install --cask mongodb-compass
+```
+
+
 ### Stop MongoDB
 If you need to stop MongoDB, perhaps for maintenance or system updates, you can stop the service with the following command:
 
