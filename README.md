@@ -42,7 +42,7 @@ To ensure that MongoDB is installed correctly and running, you can connect to th
 mongosh
 ```
 
-## Install MongoDB Compass
+### Install MongoDB Compass
 MongoDB Compass is a powerful GUI for querying, aggregating, and analyzing your MongoDB data in a visual environment:
 ```bash
 brew install --cask mongodb-compass
