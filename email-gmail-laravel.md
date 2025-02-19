@@ -2,9 +2,13 @@
 
 The Laravel Framework provides several drivers for sending emails, via SMTP, Mailgun, Postmark, Sendmail...
 
+---
+
 ### Set Google Account
 
 If we already have a Google account, then let's connect to this page **[Google Account](https://myaccount.google.com/)** and log in, in the **Security** section accessible from the menu on the left. We activate the **Two-step verification**, again from "Two-step verification" we scroll to the bottom of the page and go to the **App passwords** section passwords for apps. We generate a password for our app to which we give a name, the generated password is a **string**, we take note of this password because we will use it instead of that of our GMail account in the Laravel configuration.
+
+---
 
 ### Edit file .env
 
@@ -19,6 +23,8 @@ MAIL_FROM_ADDRESS=example@gmail.com
 MAIL_FROM_NAME="${APP_NAME}"
 ```
 **example @gmail.com** is our GMail account email, **password** is the password we generated before in the "Two-Step Verification" section of our Google account, so we change these values ​​to ours.
+
+---
 
 ### Edit config\mail.php
 
@@ -36,6 +42,8 @@ we also modify the **smtp** key of the config\mail.php file.
        'local_domain' => env('MAIL_EHLO_DOMAIN'),
      ],
 ```
+
+---
 
 ### Create class Email
 
@@ -110,11 +118,15 @@ class SendEmailGmail extends Mailable
 ```
 this default class is made up of three functions, in **envelope()** the subject of the email is defined, in **content()** the content of the email is defined and in **attachments()** any attachments of the email, for now we leave this class as it is then later we will make the appropriate changes.
 
+---
+
 ## Create the views
 
 Let's create the content of the email in **\resources\views\mail\email**.blade.php, the mail folder does not exist in the default Laravel application, so let's create it ourselves.
 
 We also create the pages to display when the email is sent successfully or an error occurs, then in \resources\views\mail\ we create two files **success.blade.php** and **error.blade.php**.
+
+---
 
 ## Indicate the correct content of the email in the content() function.
 
@@ -126,6 +138,8 @@ We also create the pages to display when the email is sent successfully or an er
         );
     }
 ```
+
+---
 
 ## Create a path in \routes\web.php that will allow us to send the email
 
