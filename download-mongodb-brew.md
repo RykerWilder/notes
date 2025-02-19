@@ -1,4 +1,4 @@
-# Download MongoDB for MacOS with Homebrew
+# Download MongoDB for MacOS via Homebrew
 
 MongoDB is a powerful, flexible NoSQL database that is widely used for modern web applications. Installing MongoDB locally on your MacBook is straightforward, especially when using the Homebrew package manager.
 
