@@ -29,18 +29,18 @@ if ($res === TRUE) {
 
 - **$filename**: Contains the name of the ZIP file to extract.
 
-- **$zip = new ZipArchive;**: Creates an instance of the ZipArchive class, which is used to handle operations on ZIP files.
+- **$zip = new ZipArchive**: Creates an instance of the ZipArchive class, which is used to handle operations on ZIP files.
 
-- **$res = $zip->open($filename);**: Attempts to open the specified ZIP file. The result of the operation is stored in the $res variable.
+- **$res = $zip->open($filename)**: Attempts to open the specified ZIP file. The result of the operation is stored in the $res variable.
 
-- **$path = dirname(__FILE__);**: Gets the path to the directory where the current PHP script is located. This path is used as the destination for extracting files.
+- **$path = dirname(__FILE__)**: Gets the path to the directory where the current PHP script is located. This path is used as the destination for extracting files.
 
-- **$ zip->extractTo($path);**: Extracts the contents of the ZIP file to the directory specified by $path.
+- **$ zip->extractTo($path)**: Extracts the contents of the ZIP file to the directory specified by $path.
 
-- **$zip->close();**: Closes the ZIP file after extraction.
+- **$zip->close()**: Closes the ZIP file after extraction.
 
-- **echo 'Unzip!';**: Displays a success message if the extraction was successful.
+- **echo 'Unzip!'**: Displays a success message if the extraction was successful.
 
-- **echo 'failed!';**: If opening the ZIP file fails, an error message appears.
+- **echo 'failed!'**: If opening the ZIP file fails, an error message appears.
 
 
