@@ -1,4 +1,4 @@
-# Youtube Downloader
+# Youtube Downloader w/ Python
 
 The code uses the yt_dlp library to download videos from YouTube (or other supported sites) and save them in a specified folder. The yt_dlp library is a fork of youtube-dl with additional improvements and updates.
 
@@ -6,16 +6,22 @@ The code uses the yt_dlp library to download videos from YouTube (or other suppo
 pip install yt-dlp
 ```
 
+We also need to download the ffmpeg library for managing multimedia files, we can do it through homebrew.
+
+```bash
+brew install ffmpeg
+```
+
 ```bash
 from yt_dlp import YoutubeDL
 
-link = "" #URL video
-output_folder = "./videos" #folder path
+link = "" 
+output_folder = "./videos" 
 
 ydl_opts = {
-    'format': 'bestvideo+bestaudio/best', #unisce audio e video
-    'merge_output_format': 'mp4', #formato
-    'outtmpl': f'{output_folder}/%(title)s.%(ext)s', #cartella di salvataggio
+    'format': 'bestvideo+bestaudio/best', 
+    'merge_output_format': 'mp4', 
+    'outtmpl': f'{output_folder}/%(title)s.%(ext)s',
 }
 
 with YoutubeDL(ydl_opts) as ydl:
