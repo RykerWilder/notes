@@ -32,11 +32,11 @@ with YoutubeDL(ydl_opts) as ydl:
 
 **output_folder = "./videos"** A string that specifies the folder where the downloaded video will be saved. The default path is ./videos, which means a folder called "videos" in the current directory.
 
-**'format': 'bestvideo+bestaudio/best'** Specifica il formato del video da scaricare. In questo caso, 'bestvideo+bestaudio/best' indica di scaricare la migliore qualità disponibile per il video e l'audio separatamente, e poi unirli. Se non è possibile, scarica il miglior formato disponibile che include già sia video che audio.
+**'format': 'bestvideo+bestaudio/best'** Specify the format of the video to download. In this case, 'bestvideo+bestaudio/best' instructs you to download the best available quality for the video and audio separately, and then merge them. If that's not possible, download the best format available that already includes both video and audio.
 
 **'merge_output_format': 'mp4'** Specifies the final file format after merging video and audio. In this case, 'mp4' indicates that the final file will be in MP4 format.
 
-**'outtmpl': f'{output_folder}/%(title)s.%(ext)s'** Specifica il template per il nome del file di output. Il template '%(title)s.%(ext)s' utilizza il titolo del video come nome del file e l'estensione del formato scelto. Il percorso di salvataggio è prefissato con output_folder, quindi il video verrà salvato nella cartella specificata.
+**'outtmpl': f'{output_folder}/%(title)s.%(ext)s'** Specify the template for the output file name. The template '%(title)s.%(ext)s' uses the title of the video as the filename and the extension of the chosen format. The save path is prefixed with output_folder, so the video will be saved in the specified folder.
 
 **with YoutubeDL(ydl_opts) as ydl** Creates an instance of YoutubeDL with the specified options. The with block ensures that resources are properly freed after download.
 
