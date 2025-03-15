@@ -2,6 +2,8 @@
 
 The following PHP code aims to extract the contents of a ZIP file into a specified directory. The ZIP file is opened, its contents are extracted to the same directory where the PHP script is located, and finally a success or failure message is displayed.
 
+---
+
 ```bash
 <?php
 set_time_limit(3600);
