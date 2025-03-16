@@ -7,4 +7,4 @@
 - **[Extract contents of a ZIP file](./unzip.php.md)**
 - **[Youtube Downloader w/ Python](./yt-downloader.md)**
 - **[Local Storage JS](./local-storage-javascript.md)**
-- **[Monkey Patching QuerySelector JS](./monkey-patching-selector-javascript.md)**
+- **[Monkey Patching querySelector JS](./monkey-patching-selector-javascript.md)**
