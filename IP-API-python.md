@@ -27,6 +27,8 @@ def get_ip_info(ip_address):
 get_ip_info("your_IP_Adress")
 ```
 
+---
+
 ### Features 
 
 Retrieves detailed information about any public IP address
@@ -41,3 +43,9 @@ Basic error handling
 
 Python 3.x
 requests library
+
+---
+
+### Example Output
+
+![output](./img/output-ip-adress-info.jpeg)
