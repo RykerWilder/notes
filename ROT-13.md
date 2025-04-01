@@ -35,4 +35,4 @@ ROT13 is not a secure encryption method! It's useful for:
 
 The alphabet has 26 letters, so rotating by 13 means applying the rotation twice returns the original text (13+13=26). This makes the same function usable for both encoding and decoding.
 
-You can see the code to encrypt in ROT13 here! - **[ROT13]()**
+You can see the code to encrypt in ROT13 here! - **[ROT13](https://github.com/RykerWilder/rot13-encryption)**
