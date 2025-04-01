@@ -1,4 +1,4 @@
-# ROT13 Cipher Implementation in Python
+# ROT13 Cipher
 
 ROT13 ("rotate by 13 places") is a simple letter substitution cipher that replaces a letter with the 13th letter after it in the alphabet.
 
