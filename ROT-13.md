@@ -11,6 +11,8 @@ ROT13 ("rotate by 13 places") is a simple letter substitution cipher that replac
 - It's its own inverse: the same function encodes and decodes.
 - Provides essentially no cryptographic security (easily broken).
 
+---
+
 ### How ROT13 Works
 
 For each letter in the text:
@@ -22,6 +24,8 @@ Example:
 - 'A' → (0 + 13) = 13 → 'N'
 - 'n' → (13 + 13) = 26 → 26-26=0 → 'a'
 
+---
+
 ## Security Note
 
 ROT13 is not a secure encryption method! It's useful for:
@@ -30,6 +34,8 @@ ROT13 is not a secure encryption method! It's useful for:
 - Learning about basic cipher techniques.
 - Simple text obfuscation.
 **Never use ROT13 for sensitive data protection.**
+
+---
 
 ## Why 13?
 
