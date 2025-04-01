@@ -9,3 +9,4 @@
 - **[Use an API to get info about an IP address](./IP-API-python.md)**
 - **[Local Storage JS](./local-storage-javascript.md)**
 - **[Monkey Patching querySelector JS](./monkey-patching-selector-javascript.md)**
+- **[ROT13 encryption](./ROT-13.md)**
