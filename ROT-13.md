@@ -26,7 +26,7 @@ Example:
 
 ---
 
-## Security Note
+### Security Note
 
 ROT13 is not a secure encryption method! It's useful for:
 
@@ -37,7 +37,7 @@ ROT13 is not a secure encryption method! It's useful for:
 
 ---
 
-## Why 13?
+### Why 13?
 
 The alphabet has 26 letters, so rotating by 13 means applying the rotation twice returns the original text (13+13=26). This makes the same function usable for both encoding and decoding.
 
