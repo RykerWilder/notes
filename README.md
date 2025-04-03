@@ -1,6 +1,7 @@
 # Index
 ---
 
+- **[Nmap](./nmap.md)**
 - **[Download MongoDB via Homebrew](./download-mongodb-brew.md)**
 
 ---
