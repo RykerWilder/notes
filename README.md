@@ -8,6 +8,7 @@
 
 ## Encryption
 - **[ROT13 encryption](./encryption/ROT-13.md)**
+- **[Caesar Cipher with Secret Key + Salt](./encryption/ceasar-key-salt.md)**
 
 ---
 
