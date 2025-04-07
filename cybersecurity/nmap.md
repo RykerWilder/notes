@@ -78,4 +78,4 @@ nmap -oN scan.txt 192.168.1.1 # Save the result to a file
 
 ---
 
-Only use Nmap on networks you have permission to scan (it may be illegal on other people's networks).
+Only use Nmap on networks you have permission to scan, it's illegal on other people's networks.
