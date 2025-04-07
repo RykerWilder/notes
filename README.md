@@ -1,7 +1,6 @@
 # Index
 ---
 
-- **[Nmap](./cybersecurity/nmap.md)**
 - **[Download MongoDB via Homebrew](./download-mongodb-brew.md)**
 
 ---
@@ -15,6 +14,11 @@
 ## Python
 - **[Youtube Downloader w/ Python](./python/yt-downloader.md)**
 - **[Use an API to get info about an IP address](./python/IP-API-python.md)**
+
+---
+
+## Cybersecurity Tool
+- **[Nmap](./cybersecurity/nmap.md)**
 
 ---
 
