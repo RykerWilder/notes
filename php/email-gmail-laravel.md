@@ -12,7 +12,7 @@ If we already have a Google account, then let's connect to this page **[Google A
 
 ### Edit file .env
 
-```bash
+```php
 MAIL_MAILER=smtp
 MAIL_HOST=smtp.gmail.com
 MAIL_PORT=465
@@ -30,7 +30,7 @@ MAIL_FROM_NAME="${APP_NAME}"
 
 we also modify the **smtp** key of the config\mail.php file.
 
-```bash
+```php
   'smtp' => [
        'transport' => 'smtp',
        'host' => env('MAIL_HOST'),
@@ -55,7 +55,7 @@ php artisan make:mail SendEmailGmail
 
 a SendEmailGmail class will be generated in \App\Mail\ similar to this:
 
-```bash
+```php
 <?php
 
 namespace App\Mail;
@@ -130,7 +130,7 @@ We also create the pages to display when the email is sent successfully or an er
 
 ## Indicate the correct content of the email in the content() function.
 
-```bash
+```php
     public function content()
     {
         return new Content(
@@ -143,7 +143,7 @@ We also create the pages to display when the email is sent successfully or an er
 
 ## Create a path in \routes\web.php that will allow us to send the email
 
-```bash
+```php
 <?php
 
 

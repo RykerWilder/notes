@@ -11,7 +11,7 @@ The file path must be: **resources/views/errors/**
 
 Once this is done, simply customize the error page. This is an idea of ​​how it could be customized.
 
-```bash
+```html
 <!doctype html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
   <head>

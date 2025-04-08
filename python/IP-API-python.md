@@ -3,7 +3,7 @@ A simple Python script to fetch geolocation and network information for any IP a
 
 ---
 
-```bash
+```python
 import requests
 def get_ip_info(ip_address):
     try:

@@ -4,7 +4,7 @@ The following PHP code aims to extract the contents of a ZIP file into a specifi
 
 ---
 
-```bash
+```php
 <?php
 set_time_limit(3600);
 ini_set('memory_limit', '256M');

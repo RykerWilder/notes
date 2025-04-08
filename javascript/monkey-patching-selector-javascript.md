@@ -4,7 +4,7 @@ This is a way not to write repetitive code in JavaScript and that simplifies rea
 
 ---
 
-```bash
+```javascript
 const $one = document.querySelector.bind(document);
 const $all = document.querySelectorAll.bind(document);
 

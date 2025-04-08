@@ -12,7 +12,7 @@ We also need to download the ffmpeg library for managing multimedia files, we ca
 brew install ffmpeg
 ```
 
-```bash
+```python
 from yt_dlp import YoutubeDL
 
 link = "" 
