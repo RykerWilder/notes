@@ -118,6 +118,17 @@ chmod +x script.sh
 
 ---
 
+#### chown (change owner)
+Change owner/group of a file.
+
+```bash
+chown owner:group file.txt
+```
+
+---
+
+## Process management
+
 #### ps (process status)
 Displays active processes.
 
