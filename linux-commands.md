@@ -1,19 +1,19 @@
 # Basic linux commands
 
 ### pwd (Print Working Directory)
-mostra il percorso della directory corrente.
+displays the path of the current directory.
 
 ---
 
 ### ls (list)
-elenca i file e le directory nella posizione corrente.
+lists the files and directories in the current location.
 
-Mostra dettagli(permessi, proprietario, dimensione):
+Show details (permissions, owner, size):
 ```bash
 ls -l
 ```
 
-Mostra anche i file nascosti (iniziano con .):
+Also show hidden files (starting with .):
 ```bash
 ls -a 
 ```
@@ -22,17 +22,17 @@ ls -a
 
 ### cd (change directory)
 
-Raggiungi la directory specificata:
+Go to the specified directory:
 ```bash
-cd percorso/assoluto 
+cd path/absolute 
 ```
 
-Torna alla directory padre:
+Go back to parent directory:
 ```bash
 cd .. 
 ```
 
-Torna alla home:
+Go back to home:
 ```bash
 cd ~ 
 ```
@@ -41,7 +41,7 @@ cd ~
 
 ### mkdir (make directory)
 
-Crea una nuova directory:
+Create a new directory:
 ```bash
 mkdir folder_name
 ```
@@ -50,7 +50,7 @@ mkdir folder_name
 
 ### rmdir (remove directory)
 
-elimina una directory **vuota**:
+delete an **empty** directory:
 ```bash
 rmdir empty_folder
 ```
@@ -58,21 +58,21 @@ rmdir empty_folder
 ---
 
 ### rm (remove)
-elimina file o directory.
+deletes files or directories.
 
-Elimina un file specifico tramite il nome:
+Delete a specific file by name:
 ```bash
-rm file.txt 
+rm file.txt
 ```
 
-Elimina una cartella e il suo contenuto **ricorsivamente**:
+Delete a folder and its contents **recursively**:
 ```bash
 rm -r folder_name
 ```
 
-Forza l'eliminazione senza chiedere conferma:
+Force delete without asking for confirmation:
 ```bash
 rm -f folder_name
 ```
 
---- 
+---
