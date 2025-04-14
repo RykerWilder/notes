@@ -1,9 +1,11 @@
 # Basic linux commands
 
-- ### pwd (Print Working Directory)
+### pwd (Print Working Directory)
 mostra il percorso della directory corrente.
 
-- ### ls (list)
+---
+
+### ls (list)
 elenca i file e le directory nella posizione corrente.
 
 Mostra dettagli(permessi, proprietario, dimensione):
@@ -16,8 +18,9 @@ Mostra anche i file nascosti (iniziano con .):
 ls -a 
 ```
 
+---
 
-- ### cd (change directory)
+### cd (change directory)
 
 Raggiungi la directory specificata:
 ```bash
@@ -34,22 +37,27 @@ Torna alla home:
 cd ~ 
 ```
 
+---
 
-- ### mkdir (make directory)
+### mkdir (make directory)
 
 Crea una nuova directory:
 ```bash
 mkdir folder_name
 ```
 
-- ### rmdir (remove directory)
+---
+
+### rmdir (remove directory)
 
 elimina una directory **vuota**:
 ```bash
 rmdir empty_folder
 ```
 
-- ### rm (remove)
+---
+
+### rm (remove)
 elimina file o directory.
 
 Elimina un file specifico tramite il nome:
@@ -66,3 +74,5 @@ Forza l'eliminazione senza chiedere conferma:
 ```bash
 rm -f folder_name
 ```
+
+--- 
