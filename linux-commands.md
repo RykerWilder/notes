@@ -1,11 +1,13 @@
 # Basic linux commands
 
-### pwd (Print Working Directory)
+## File navigation and management
+
+#### pwd (Print Working Directory)
 displays the path of the current directory.
 
 ---
 
-### ls (list)
+#### ls (list)
 lists the files and directories in the current location.
 
 Show details (permissions, owner, size):
@@ -20,7 +22,7 @@ ls -a
 
 ---
 
-### cd (change directory)
+#### cd (change directory)
 
 Go to the specified directory:
 ```bash
@@ -39,7 +41,7 @@ cd ~
 
 ---
 
-### mkdir (make directory)
+#### mkdir (make directory)
 
 Create a new directory:
 ```bash
@@ -48,7 +50,7 @@ mkdir folder_name
 
 ---
 
-### rmdir (remove directory)
+#### rmdir (remove directory)
 
 delete an **empty** directory:
 ```bash
@@ -57,7 +59,7 @@ rmdir empty_folder
 
 ---
 
-### rm (remove)
+#### rm (remove)
 deletes files or directories.
 
 Delete a specific file by name:
@@ -77,7 +79,7 @@ rm -f folder_name
 
 ---
 
-### touch
+#### touch
 create a new empty file or update the modification date.
 
 ```bash
@@ -86,7 +88,7 @@ touch new_file.txt
 
 ---
 
-### cat (concatenate)
+#### cat (concatenate)
 displays the contents of a file.
 
 ```bash
@@ -95,7 +97,7 @@ cat file.txt
 
 ---
 
-### nano
+#### nano
 text editor in the terminal.
 
 ```bash
@@ -104,7 +106,9 @@ nano file.txt
 
 ---
 
-### chmod (change mod)
+## Permission management
+
+#### chmod (change mod)
 changes the permissions of a file/directory.
 
 adds execute permission to a file:
@@ -114,7 +118,7 @@ chmod +x script.sh
 
 ---
 
-### ps (process status)
+#### ps (process status)
 displays active processes.
 
 displays all running processes:
