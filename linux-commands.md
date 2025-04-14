@@ -76,3 +76,48 @@ rm -f folder_name
 ```
 
 ---
+
+### touch
+create a new empty file or update the modification date.
+
+```bash
+touch new_file.txt
+```
+
+---
+
+### cat (concatenate)
+displays the contents of a file.
+
+```bash
+cat file.txt
+```
+
+---
+
+### nano
+text editor in the terminal.
+
+```bash
+nano file.txt
+```
+
+---
+
+### chmod (change mod)
+changes the permissions of a file/directory.
+
+adds execute permission to a file:
+```bash
+chmod +x script.sh
+```
+
+---
+
+### ps (process status)
+displays active processes.
+
+displays all running processes:
+```bash
+ps aux
+```
