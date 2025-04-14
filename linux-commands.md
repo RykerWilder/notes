@@ -1,5 +1,10 @@
 # Basic linux commands
 
+**Index**
+- [File navigation and management](##file-navigation-and-management)
+- [Permission management](##permission-management)
+- [Process management](##process-management)
+
 ## File navigation and management
 
 #### pwd (Print Working Directory)
