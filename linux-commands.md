@@ -18,8 +18,6 @@ ls -a
 
 
 - ### cd (change directory)
-cambia directory.
-
 
 Raggiungi la directory specificata:
 ```bash
@@ -38,18 +36,33 @@ cd ~
 
 
 - ### mkdir (make directory)
-crea una nuova directory
-opzioni comuni:
+
+Crea una nuova directory:
+```bash
 mkdir folder_name
+```
 
 - ### rmdir (remove directory)
-elimina una directory vuota.
+
+elimina una directory **vuota**:
+```bash
 rmdir empty_folder
+```
 
 - ### rm (remove)
 elimina file o directory.
-opzioni comuni:
-rm file.txt : elimina un file specifico tramite il nome.
-rm -r folder_name : elimina una cartella e il suo contenuto ricorsivamente.
-rm -f : forza l'eliminazione senza chiedere conferma.
 
+Elimina un file specifico tramite il nome:
+```bash
+rm file.txt 
+```
+
+Elimina una cartella e il suo contenuto **ricorsivamente**:
+```bash
+rm -r folder_name
+```
+
+Forza l'eliminazione senza chiedere conferma:
+```bash
+rm -f folder_name
+```
