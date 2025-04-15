@@ -4,6 +4,8 @@
 - [File navigation and management](##file-navigation-and-management)
 - [Permission management](##permission-management)
 - [Process management](##process-management)
+- [Searching and manipulating text](#searching-and-manipulating-text)
+- [Networks e connections](#networks-and-connections)
 
 ## File navigation and management
 
