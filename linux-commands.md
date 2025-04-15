@@ -7,12 +7,12 @@
 
 ## File navigation and management
 
-#### pwd (Print Working Directory)
+### pwd (Print Working Directory)
 Displays the path of the current directory.
 
 ---
 
-#### ls (list)
+### ls (list)
 Lists the files and directories in the current location.
 
 show details (permissions, owner, size):
@@ -27,7 +27,7 @@ ls -a
 
 ---
 
-#### cd (change directory)
+### cd (change directory)
 
 go to the specified directory:
 ```bash
