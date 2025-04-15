@@ -46,7 +46,7 @@ cd ~
 
 ---
 
-#### mkdir (make directory)
+### mkdir (make directory)
 
 create a new directory:
 ```bash
@@ -55,7 +55,7 @@ mkdir folder_name
 
 ---
 
-#### rmdir (remove directory)
+### rmdir (remove directory)
 
 delete an **empty** directory:
 ```bash
@@ -64,7 +64,7 @@ rmdir empty_folder
 
 ---
 
-#### rm (remove)
+### rm (remove)
 Deletes files or directories.
 
 delete a specific file by name:
@@ -84,7 +84,7 @@ rm -f folder_name
 
 ---
 
-#### touch
+### touch
 Create a new empty file or update the modification date.
 
 ```bash
@@ -93,7 +93,7 @@ touch new_file.txt
 
 ---
 
-#### cat (concatenate)
+### cat (concatenate)
 Displays the contents of a file.
 
 ```bash
@@ -102,7 +102,7 @@ cat file.txt
 
 ---
 
-#### nano
+### nano
 Text editor in the terminal.
 
 ```bash
@@ -113,7 +113,7 @@ nano file.txt
 
 ## Permission management
 
-#### chmod (change mod)
+### chmod (change mod)
 Changes the permissions of a file/directory.
 
 adds execute permission to a file:
@@ -123,7 +123,7 @@ chmod +x script.sh
 
 ---
 
-#### chown (change owner)
+### chown (change owner)
 Change owner/group of a file.
 
 ```bash
@@ -134,7 +134,7 @@ chown owner:group file.txt
 
 ## Process management
 
-#### ps (process status)
+### ps (process status)
 Displays active processes.
 
 displays all running processes:
@@ -143,14 +143,14 @@ ps aux
 ```
 
 ---
-#### kill
+### kill
 To kill a process.
 
 ---
 
 ## Searching and manipulating text
 
-#### grep
+### grep
 Search for text in a file.\
 
 ```bash
@@ -159,7 +159,7 @@ grep "error" file.txt
 
 ---
 
-#### find
+### find
 Search for files or directories.
 
 ```bash
@@ -170,7 +170,7 @@ find /home -name "*.txt"
 
 ## Networks and connections
 
-#### ping
+### ping
 Tests the connectivity of a host.
 
 ```bash
@@ -179,12 +179,12 @@ ping google.com
 
 ---
 
-#### ifconfig
+### ifconfig
 Displays information about network interfaces.
 
 ---
 
-#### ssh
+### ssh
 Secure remote connection.
 
 ```bash
@@ -193,7 +193,7 @@ ssh user@server
 
 ---
 
-#### scp
+### scp
 Copy files via SSH.
 
 ```bash
@@ -202,7 +202,7 @@ scp file.txt user@server:/path
 
 ---
 
-#### wget/curl
+### wget/curl
 Download files from the internet
 
 ```bash
