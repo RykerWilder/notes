@@ -143,16 +143,15 @@ ps aux
 ```
 
 ---
-
 #### kill
-Per terminare un processo.
+To kill a process.
 
 ---
 
-## Ricerca e manipolazione testi
+## Searching and manipulating text
 
 #### grep
-Cerca un testo all'interno di un file.\
+Search for text in a file.\
 
 ```bash
 grep "error" file.txt
@@ -161,7 +160,7 @@ grep "error" file.txt
 ---
 
 #### find
-Cerca file o directory.
+Search for files or directories.
 
 ```bash
 find /home -name "*.txt"
@@ -169,10 +168,10 @@ find /home -name "*.txt"
 
 ---
 
-## Reti e connessioni
+## Networks and connections
 
 #### ping
-Verifica la connettività di un host.
+Tests the connectivity of a host.
 
 ```bash
 ping google.com
@@ -181,12 +180,12 @@ ping google.com
 ---
 
 #### ifconfig
-Mostra infromazioni sulle interfacce di rete.
+Displays information about network interfaces.
 
 ---
 
 #### ssh
-Connessione remota sicura.
+Secure remote connection.
 
 ```bash
 ssh user@server
@@ -195,7 +194,7 @@ ssh user@server
 ---
 
 #### scp
-Copia file via SSH.
+Copy files via SSH.
 
 ```bash
 scp file.txt user@server:/path
@@ -204,7 +203,7 @@ scp file.txt user@server:/path
 ---
 
 #### wget/curl
-Scarica file da internet
+Download files from the internet
 
 ```bash
 wget https://example.com/file.zip
