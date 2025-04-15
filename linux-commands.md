@@ -141,3 +141,71 @@ displays all running processes:
 ```bash
 ps aux
 ```
+
+---
+
+#### kill
+Per terminare un processo.
+
+---
+
+## Ricerca e manipolazione testi
+
+#### grep
+Cerca un testo all'interno di un file.\
+
+```bash
+grep "error" file.txt
+```
+
+---
+
+#### find
+Cerca file o directory.
+
+```bash
+find /home -name "*.txt"
+```
+
+---
+
+## Reti e connessioni
+
+#### ping
+Verifica la connettività di un host.
+
+```bash
+ping google.com
+```
+
+---
+
+#### ifconfig
+Mostra infromazioni sulle interfacce di rete.
+
+---
+
+#### ssh
+Connessione remota sicura.
+
+```bash
+ssh user@server
+```
+
+---
+
+#### scp
+Copia file via SSH.
+
+```bash
+scp file.txt user@server:/path
+```
+
+---
+
+#### wget/curl
+Scarica file da internet
+
+```bash
+wget https://example.com/file.zip
+```
