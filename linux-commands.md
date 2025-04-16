@@ -12,7 +12,7 @@ When working with Linux, the terminal is a powerful tool for interacting with th
 ## File navigation and management
 
 ### pwd (Print Working Directory)
-
+Shows your current directory path.
 ```bash
 pwd   # Displays the path of the current directory
 ```
@@ -20,36 +20,39 @@ pwd   # Displays the path of the current directory
 ---
 
 ### ls (list)
-
+Lists directory contents.
 ```bash
-ls      # Lists the files and directories in the current location.
-ls -l   # Show details (permissions, owner, size)
-ls -a   # Also show hidden files (starting with .)
+ls      # Basic listing
+ls -l   # Long format (permissions, owner, size, modification time)
+ls -a   # Include hidden files (starting with '.')
+ls -lh  # Human-readable sizes (KB, MB, GB)
 ```
 
 ---
 
 ### cd (change directory)
-
-
+Navigates between directories.
 ```bash
-cd path/absolute   # Go to the specified directory
-cd ..              # Go back to parent directory
-cd ~               # Go back to home
+cd /path/to/dir  # Absolute path
+cd folder        # Relative path
+cd ..            # Parent directory
+cd ~ or cd       # Home directory
+cd -             # Previous directory
 ```
 
 ---
 
 ### mkdir (make directory)
-
+Creates new directories.
 ```bash
-mkdir folder_name # Create a new directory
+mkdir folder            # Single directory
+mkdir -p parent/child   # Creates nested directories
 ```
 
 ---
 
 ### rmdir (remove directory)
-
+Removes **empty** directories.
 ```bash
 rmdir empty_folder # Delete an empty directory
 ```
@@ -57,33 +60,35 @@ rmdir empty_folder # Delete an empty directory
 ---
 
 ### rm (remove)
-
+Deletes files/directories.
 ```bash
-rm file.txt          # Delete a specific file by name
-rm -r folder_name    # Delete a folder and its contents recursively
-rm -f folder_name    # Force delete without asking for confirmation
+rm file.txt          # Delete file
+rm -r folder/        # Recursive delete (directories + contents)
+rm -f file           # Force delete (no confirmation)
 ```
 
 ---
 
 ### touch
-
+Creates empty files or updates timestamps.
 ```bash
-touch new_file.txt  # Create a new empty file or update the modification date
+touch file.txt       # Creates if doesn't exist
+touch existing.txt   # Updates modification time
 ```
 
 ---
 
 ### cat (concatenate)
-
+Displays or combines file contents.
 ```bash
-cat file.txt  # Displays the contents of a file
+cat file.txt                # Show content
+cat file1 file2 > combined  # Combine files
 ```
 
 ---
 
 ### nano
-
+Simple terminal text editor.
 ```bash
 nano file.txt  # Text editor in the terminal
 ```
@@ -96,15 +101,17 @@ nano file.txt  # Text editor in the terminal
 Changes the permissions of a file/directory.
 
 ```bash
-chmod +x script.sh  # Adds execute permission to a file
+chmod 755 script.sh    # Numeric mode (owner:rwx, group:r-x, others:r-x)
+chmod +x file          # Add execute permission
 ```
 
 ---
 
 ### chown (change owner)
-
+Changes file ownership.
 ```bash
-chown owner:group file.txt  # Change owner/group of a file.
+chown user:group file  # Change both user and group
+chown user file        # Change only user
 ```
 
 ---
@@ -115,10 +122,11 @@ A process is an activity that the computer is performing at a particular time.
 ### ps (process status)
 Shows running processes.
 ```bash
-ps             # Current user's processes
-ps aux         # All running processes
-ps -ef         # Full list of processes
-ps -u [user]   # Processes of a specific user
+ps                 # Current user's processes
+ps aux             # All running processes
+ps -ef             # Full list of processes
+ps -ef | grep ssh  # Filter processes
+ps -u [user]       # Processes of a specific user
 ```
 
 ---
@@ -126,8 +134,8 @@ ps -u [user]   # Processes of a specific user
 ### top/htop
 Interactive process monitoring.
 ```bash
-top     # Dynamic interface (press 'q' to exit)
-htop    # Improved version (if not installed: `sudo apt install htop`)
+top    # Built-in process monitor
+htop   # Enhanced version (install with sudo apt install htop)
 ```
 
 ---
@@ -143,8 +151,8 @@ firefox &    # Starts Firefox in the background
 ### kill
 Ends a process.
 ```bash
-kill [PID]       # Send SIGTERM (gentle termination)
-kill -9 [PID]    # Force shutdown (SIGKILL)
+kill 1234          # Graceful termination (SIGTERM)
+kill -9 1234       # Force kill (SIGKILL)
 ```
 
 ---
@@ -152,8 +160,8 @@ kill -9 [PID]    # Force shutdown (SIGKILL)
 ### killall/pkill
 Kill processes by name.
 ```bash
-killall firefox   # Kill all Firefox processes
-pkill -f "name"   # Kill processes matching name
+killall firefox    # All Firefox instances
+pkill -f "pattern" # Processes matching pattern
 ```
 
 ---
@@ -161,25 +169,29 @@ pkill -f "name"   # Kill processes matching name
 ### nice/renice
 Change the priority of a process.
 ```bash
-nice -n 10 ./script.sh   # Start with low priority (value -20 to 19)
-renice -n 5 -p [PID]     # Change the priority of an existing process
+nice -n 10 command  # Start with low priority
+renice 5 -p 1234    # Change running process priority
 ```
 ---
 
 ## Searching and manipulating text
 
 ### grep
-
+Searches text patterns.
 ```bash
-grep "error" file.txt  # Search for text in a file
+grep "error" log.txt      # Basic search
+grep -i "error" log.txt   # Case-insensitive
+grep -r "pattern" folder/ # Recursive search
 ```
 
 ---
 
 ### find
-
+Searches for files.
 ```bash
-find /home -name "*.txt"  # Search for files or directories
+find /home -name "*.txt"      # By name
+find . -size +1M -type f      # Files >1MB
+find /var/log -mtime -7       # Modified in last 7 days
 ```
 
 ---
@@ -187,39 +199,44 @@ find /home -name "*.txt"  # Search for files or directories
 ## Networks and connections
 
 ### ping
-
+Tests network connectivity.
 ```bash
-ping google.com  # Tests the connectivity of a host
+ping example.com
+ping -c 4 example.com  # Limit to 4 packets
 ```
 
 ---
 
 ### ifconfig
-
+Network interface configuration.
 ```bash
-ifconfig  # Displays information about network interfaces
+ifconfig        # Legacy tool (deprecated on many systems)
+ip addr show    # Modern replacement
 ```
 
 ---
 
 ### ssh
-
+Remote secure login.
 ```bash
-ssh user@server  # Secure remote connection
+ssh user@host            # Basic connection
+ssh -p 2222 user@host    # Custom port
 ```
 
 ---
 
 ### scp
-
+Copies files over SSH.
 ```bash
-scp file.txt user@server:/path  # Copy files via SSH
+scp file.txt user@host:/path/  # Upload
+scp user@host:/file.txt ./     # Download
 ```
 
 ---
 
 ### wget/curl
-
+Downloads files.
 ```bash
-wget https://example.com/file.zip  # Download files from the internet
+wget https://example.com/file.zip  # Simple download
+curl -O https://example.com/file   # More flexible alternative
 ```
