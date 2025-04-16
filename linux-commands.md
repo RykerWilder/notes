@@ -135,7 +135,7 @@ chown owner:group file.txt
 ---
 
 ## Process management
-
+A process is an activity that the computer is performing at a particular time.
 ### ps (process status)
 Shows running processes.
 ```bash
@@ -145,6 +145,8 @@ ps -ef         # Full list of processes
 ps -u [user]   # Processes of a specific user
 ```
 
+---
+
 ### top/htop
 Interactive process monitoring.
 ```bash
@@ -152,11 +154,15 @@ top     # Dynamic interface (press 'q' to exit)
 htop    # Improved version (if not installed: `sudo apt install htop`)
 ```
 
+---
+
 ### &
 Runs a command in the background.
 ```bash
 firefox &    # Starts Firefox in the background
 ```
+
+---
 
 ### kill
 Ends a process.
@@ -165,12 +171,16 @@ kill [PID]       # Send SIGTERM (gentle termination)
 kill -9 [PID]    # Force shutdown (SIGKILL)
 ```
 
+---
+
 ### killall/pkill
 Kill processes by name.
 ```bash
 killall firefox   # Kill all Firefox processes
 pkill -f "name"   # Kill processes matching name
 ```
+
+---
 
 ### nice/renice
 Change the priority of a process.
