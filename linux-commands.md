@@ -169,19 +169,17 @@ renice -n 5 -p [PID]     # Change the priority of an existing process
 ## Searching and manipulating text
 
 ### grep
-Search for text in a file.\
 
 ```bash
-grep "error" file.txt
+grep "error" file.txt  # Search for text in a file
 ```
 
 ---
 
 ### find
-Search for files or directories.
 
 ```bash
-find /home -name "*.txt"
+find /home -name "*.txt"  # Search for files or directories
 ```
 
 ---
