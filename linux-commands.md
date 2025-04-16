@@ -3,9 +3,9 @@
 When working with Linux, the terminal is a powerful tool for interacting with the operating system. Unlike the graphical interface (where you use the mouse to navigate among folders), here you use text commands.
 
 **Index**
-- [File navigation and management](##file-navigation-and-management)
-- [Permission management](##permission-management)
-- [Process management](##process-management)
+- [File navigation and management](#file-navigation-and-management)
+- [Permission management](#permission-management)
+- [Process management](#process-management)
 - [Searching and manipulating text](#searching-and-manipulating-text)
 - [Networks e connections](#networks-and-connections)
 
