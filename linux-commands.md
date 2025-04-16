@@ -95,18 +95,16 @@ nano file.txt  # Text editor in the terminal
 ### chmod (change mod)
 Changes the permissions of a file/directory.
 
-adds execute permission to a file:
 ```bash
-chmod +x script.sh
+chmod +x script.sh  # Adds execute permission to a file
 ```
 
 ---
 
 ### chown (change owner)
-Change owner/group of a file.
 
 ```bash
-chown owner:group file.txt
+chown owner:group file.txt  # Change owner/group of a file.
 ```
 
 ---
