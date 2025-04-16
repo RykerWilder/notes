@@ -187,40 +187,39 @@ find /home -name "*.txt"  # Search for files or directories
 ## Networks and connections
 
 ### ping
-Tests the connectivity of a host.
 
 ```bash
-ping google.com
+ping google.com  # Tests the connectivity of a host
 ```
 
 ---
 
 ### ifconfig
-Displays information about network interfaces.
+
+```bash
+ifconfig  # Displays information about network interfaces
+```
 
 ---
 
 ### ssh
-Secure remote connection.
 
 ```bash
-ssh user@server
+ssh user@server  # Secure remote connection
 ```
 
 ---
 
 ### scp
-Copy files via SSH.
 
 ```bash
-scp file.txt user@server:/path
+scp file.txt user@server:/path  # Copy files via SSH
 ```
 
 ---
 
 ### wget/curl
-Download files from the internet
 
 ```bash
-wget https://example.com/file.zip
+wget https://example.com/file.zip  # Download files from the internet
 ```
