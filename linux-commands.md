@@ -137,17 +137,47 @@ chown owner:group file.txt
 ## Process management
 
 ### ps (process status)
-Displays active processes.
-
-displays all running processes:
+Shows running processes.
 ```bash
-ps aux
+ps             # Current user's processes
+ps aux         # All running processes
+ps -ef         # Full list of processes
+ps -u [user]   # Processes of a specific user
 ```
 
----
-### kill
-To kill a process.
+### top/htop
+Interactive process monitoring.
+```bash
+top     # Dynamic interface (press 'q' to exit)
+htop    # Improved version (if not installed: `sudo apt install htop`)
+```
 
+### &
+Runs a command in the background.
+```bash
+firefox &    # Starts Firefox in the background
+```
+
+### kill
+Ends a process.
+```bash
+kill [PID]       # Send SIGTERM (gentle termination)
+kill -9 [PID]    # Force shutdown (SIGKILL)
+```
+
+### killall/pkill
+Kill processes by name.
+```bash
+killall firefox   # Kill all Firefox processes
+pkill -f "name"   # Kill processes matching name
+```
+
+### nice/renice
+Change the priority of a process.
+```bash
+nice -n 10 ./script.sh   # Start with low priority (value -20 to 19)
+renice -n 5 -p [PID]     # Change the priority of an existing process
+```
 ---
 
 ## Searching and manipulating text
