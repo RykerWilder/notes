@@ -30,9 +30,20 @@ whatis ls            # Show "ls - list directory contents"
 ---
 
 ### --help
-Quick guide.
+Quick guide of a command options.
 ```bash
 ls --help            # Command options
+```
+
+---
+
+### history
+Show history of executed commands.
+```bash
+history       # Full list
+history 10    # Last 10 commands
+!42           # Execute command with ID 42 from history
+!!            # Repeat last command
 ```
 
 ---
