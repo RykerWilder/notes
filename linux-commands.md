@@ -179,9 +179,21 @@ renice 5 -p 1234    # Change running process priority
 ### grep
 Searches text patterns.
 ```bash
-grep "error" log.txt      # Basic search
-grep -i "error" log.txt   # Case-insensitive
-grep -r "pattern" folder/ # Recursive search
+grep "text" file.txt             # Search for "text" in file.txt
+grep -i "text" file.txt          # Ignore case
+grep -r "text" /folder           # Recursive search
+grep -v "text" file.txt          # Show lines that do NOT contain "text"
+grep -c "text" file.txt          # Count occurrences
+grep -A 3 -B 2 "text" file.txt   # Show 3 lines after and 2 before the match
+```
+
+---
+
+### tr
+Replaces or deletes characters.
+```bash
+tr 'a-z' 'A-Z' < file.txt     # Converti in maiuscolo
+tr -d '\n' < file.txt         # Rimuovi a capo
 ```
 
 ---
