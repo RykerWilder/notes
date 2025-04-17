@@ -10,6 +10,33 @@ When working with Linux, the terminal is a powerful tool for interacting with th
 - [Searching and manipulating text](#searching-and-manipulating-text)
 - [Networks e connections](#networks-and-connections)
 
+## Utils
+
+### man
+Command manual.
+```bash
+man command              # Show the official manual
+man -k "keyword"         # Search the manuals (equivalent to `apropos`)
+```
+
+---
+
+### whatis 
+Short description of a command.
+```bash
+whatis ls            # Show "ls - list directory contents"
+```
+
+---
+
+### --help
+Quick guide.
+```bash
+ls --help            # Command options
+```
+
+---
+
 ## File navigation and management
 
 ### pwd (Print Working Directory)
