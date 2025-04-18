@@ -171,6 +171,23 @@ umask       # Show the current value
 ```
 
 ---
+### SUID (Set User ID)
+Execute the file with owner permissions.
+```bash
+chmod u+s file     # Set SUID
+chmod 4755 file    # Set SUID to numeric format (4xxx)
+```
+
+---
+
+### SGID (Set Group ID)
+Execute the file with group permissions.
+```bash
+chmod g+s file      # Set SGID
+chmod 2755 file     # Set SGID to numeric format (2xxx)
+```
+
+---
 
 ## Process management
 A process is an activity that the computer is performing at a particular time.
