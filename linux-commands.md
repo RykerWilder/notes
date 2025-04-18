@@ -140,15 +140,15 @@ nano file.txt  # Text editor in the terminal
 Changes the permissions of a file/directory.
 
 ```bash
-chmod u+rwx file  # Aggiunge permessi di lettura (r), scrittura (w), esecuzione (x) all'utente (u)
-chmod g-rw file   # Rimuove lettura e scrittura dal gruppo (g)
-chmod o=x file    # Imposta solo esecuzione per altri (o)
-chmod a+w file    # Aggiunge scrittura a tutti (a = all)
+chmod u+rwx file   # Add read (r), write (w), execute (x) permissions to user (u)
+chmod g-rw file    # Remove read and write permissions from group (g)
+chmod o=x file     # Set execute only for others (o)
+chmod a+w file     # Add write permissions to everyone (a = all)
 ```
 
 ```bash
-chmod 755 file    # rwxr-xr-x (7=rwx per l'utente, 5=r-x per gruppo e altri)
-chmod 644 file    # rw-r--r-- (6=rw- per l'utente, 4=r-- per gruppo e altri)
+chmod 755 file   # rwxr-xr-x (7=rwx for user, 5=r-x for group and others)
+chmod 644 file   # rw-r--r-- (6=rw- for user, 4=r-- for group and others)
 ```
 
 ---
@@ -156,18 +156,18 @@ chmod 644 file    # rw-r--r-- (6=rw- per l'utente, 4=r-- per gruppo e altri)
 ### chown (change owner) / chgrp (change group)
 Changes file ownership.
 ```bash
-chown user:group file  # Change both user and group
-chown user file        # Change only user
-chgrp group file      # Change only the group
+chown user:group file   # Change both user and group
+chown user file         # Change only user
+chgrp group file        # Change only the group
 ```
 
 ---
 
 ### umask
- Impostare i permessi predefiniti.
+Set default permissions.
 ```bash
-umask 022  # Imposta i permessi predefiniti (es. 755 per le directory, 644 per i file)
-umask      # Mostra il valore corrente
+umask 022   # Set default permissions (e.g. 755 for directories, 644 for files)
+umask       # Show the current value
 ```
 
 ---
