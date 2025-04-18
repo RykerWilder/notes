@@ -140,17 +140,25 @@ nano file.txt  # Text editor in the terminal
 Changes the permissions of a file/directory.
 
 ```bash
-chmod 755 script.sh    # Numeric mode (owner:rwx, group:r-x, others:r-x)
-chmod +x file          # Add execute permission
+chmod u+rwx file  # Aggiunge permessi di lettura (r), scrittura (w), esecuzione (x) all'utente (u)
+chmod g-rw file   # Rimuove lettura e scrittura dal gruppo (g)
+chmod o=x file    # Imposta solo esecuzione per altri (o)
+chmod a+w file    # Aggiunge scrittura a tutti (a = all)
+```
+
+```bash
+chmod 755 file    # rwxr-xr-x (7=rwx per l'utente, 5=r-x per gruppo e altri)
+chmod 644 file    # rw-r--r-- (6=rw- per l'utente, 4=r-- per gruppo e altri)
 ```
 
 ---
 
-### chown (change owner)
+### chown (change owner) / chgrp (change group)
 Changes file ownership.
 ```bash
 chown user:group file  # Change both user and group
 chown user file        # Change only user
+chgrp group file      # Change only the group
 ```
 
 ---
