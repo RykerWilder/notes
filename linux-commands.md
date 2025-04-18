@@ -10,8 +10,11 @@ When working with Linux, the terminal is a powerful tool for interacting with th
 - [Searching and manipulating text](#searching-and-manipulating-text)
 - [Networks e connections](#networks-and-connections)
 
+---
+---
 ## Utils
-
+---
+---
 ### man
 Command manual.
 ```bash
@@ -47,9 +50,10 @@ history 10    # Last 10 commands
 ```
 
 ---
-
+---
 ## File navigation and management
-
+---
+---
 ### pwd (Print Working Directory)
 Shows your current directory path.
 ```bash
@@ -133,8 +137,10 @@ nano file.txt  # Text editor in the terminal
 ```
 
 ---
-
+---
 ## Permission management
+---
+---
 
 ### chmod (change mod)
 Changes the permissions of a file/directory.
@@ -188,8 +194,10 @@ chmod 2755 file     # Set SGID to numeric format (2xxx)
 ```
 
 ---
-
+---
 ## Process management
+---
+---
 A process is an activity that the computer is performing at a particular time.
 
 ### ps (process status)
@@ -246,9 +254,10 @@ nice -n 10 command  # Start with low priority
 renice 5 -p 1234    # Change running process priority
 ```
 ---
-
+---
 ## Searching and manipulating text
-
+---
+---
 ### grep
 Searches text patterns.
 ```bash
@@ -280,9 +289,10 @@ find /var/log -mtime -7       # Modified in last 7 days
 ```
 
 ---
-
+---
 ## Networks and connections
-
+---
+---
 ### ping
 Tests network connectivity.
 ```bash
