@@ -163,6 +163,15 @@ chgrp group file      # Change only the group
 
 ---
 
+### umask
+ Impostare i permessi predefiniti.
+```bash
+umask 022  # Imposta i permessi predefiniti (es. 755 per le directory, 644 per i file)
+umask      # Mostra il valore corrente
+```
+
+---
+
 ## Process management
 A process is an activity that the computer is performing at a particular time.
 
