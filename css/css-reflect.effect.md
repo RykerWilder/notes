@@ -1,1 +1,0 @@
-Possiamo creare un effetto riflesso in CSS per le immagini utilizzando sull’immagine -webkit-box-reflect in cui andremo ad inserire come primo parametro la direzione in cui verrà visualizzato il riflesso, come secondo andremo ad inserire la distanza che deve avere dall’immagine e come terzo la sfumatura che vogliamo abbia il riflesso.
