@@ -48,4 +48,4 @@ requests library
 
 ### Example Output
 
-![output](./img/output-ip-adress-info.jpeg)
+![output](../img/output-ip-adress-info.jpeg)
