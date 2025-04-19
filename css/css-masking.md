@@ -1,4 +1,4 @@
-## What is CSS Masking?
+# CSS Masking
 
 CSS Masking is a technique that allows you to hide or show parts of an element by using an image or gradient as a mask. It works similarly to mask layers in graphics programs.
 
@@ -13,5 +13,4 @@ CSS Masking is a technique that allows you to hide or show parts of an element b
 }
 ```
 
-output
 ![css-masking](../img/output-css-masking.jpg)
