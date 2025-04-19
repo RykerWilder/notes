@@ -1,3 +1,17 @@
 ## Cos'è CSS Masking?
 
 CSS Masking è una tecnica che permette di nascondere o mostrare parti di un elemento utilizzando un'immagine o un gradiente come maschera. Funziona in modo simile ai livelli di maschera nei programmi di grafica.
+
+---
+
+```css
+.mask {
+    mask-image: url(mask.png);
+    mask-repeat: no-repeat;
+    mask-size: cover;
+    mask-position: center;
+}
+```
+
+output
+[css-masking](../img/output-css-masking.jpg)
