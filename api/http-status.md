@@ -9,6 +9,7 @@ HTTP status are 3-digit numeric codes that a web server sends to the browser (or
 | 201    | Created                  | Request completed and new resource created                                  |
 | 204    | No Content               | Request completed but no content to return                                  |
 
+---
 
 **Redirections (3xx)**
 | Code  | Name                     | Description                                                                |
@@ -17,6 +18,7 @@ HTTP status are 3-digit numeric codes that a web server sends to the browser (or
 | 302   | Found                    | The resource is temporarily elsewhere                                      |
 | 304   | Not Modified             | The resource is not modified (used for cache)                              |
 
+---
 
 **Client Errors (4xx)**
 | Code   | Name                     | Description                                                                 |
@@ -29,6 +31,7 @@ HTTP status are 3-digit numeric codes that a web server sends to the browser (or
 | 409    | Conflict                 | Conflict with the current state of the server                               |
 | 429    | Too many requests        | The client has exceeded the number of requests                              |
 
+---
 
 **Server Errors (5xx)**
 | Code   | Name                     | Description                                                                 |
