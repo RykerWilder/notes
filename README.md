@@ -31,7 +31,8 @@
 ---
 
 ## API
-- **[Use an API to get info about an IP address](./python/IP-API-python.md)**
+- **[Use an API to get info about an IP address](./api/IP-API-python.md)**
+- **[HTTP Status](./api/http-status.md)**
 
 ---
 
