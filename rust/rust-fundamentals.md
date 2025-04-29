@@ -70,3 +70,35 @@ fn main() {
     let is_less = a < b;
 }
 ```
+
+## Conditions
+
+**if-else**
+```rust
+
+fn main() {
+    let number = 7;
+
+    if number < 5 {
+        print!("condition is true");
+    } else if number == 5{
+        println!("number is exactly 5!");
+    } else {
+        println!("condition is false");
+    }
+}
+```
+
+**match**
+```rust
+fn main() {
+    let number = 3;
+
+    match number {
+        1 => println!("One"),
+        2 => println!("Two"),
+        3 => println!("Three"),
+        _ => println!("other number") // default case
+    }
+}
+```
