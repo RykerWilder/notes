@@ -50,6 +50,8 @@ fn main() {
 }
 ```
 
+---
+
 ## Mathematical Operators
 
 ```rust
@@ -70,6 +72,8 @@ fn main() {
     let is_less = a < b;
 }
 ```
+
+---
 
 ## Conditions
 
