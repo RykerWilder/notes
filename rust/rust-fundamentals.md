@@ -1,3 +1,8 @@
+# Rust
+Rust is a modern, fast and secure programming language, particularly suitable for system programming, high-performance applications.
+
+---
+
 ## Screen Printing
 
 ```rust
