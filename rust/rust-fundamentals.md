@@ -1,4 +1,4 @@
-## Screen printing
+## Screen Printing
 
 ```rust
 //this is the main function. Every Rust program starts here.
@@ -47,5 +47,26 @@ fn main() {
 
     // concatenation using {} to format string
     print!("My name is {name} and i am {age} years old.");
+}
+```
+
+## Mathematical Operators
+
+```rust
+fn main() {
+    let a = 5;
+    let b = 10;
+
+    //arithmetic operators
+    let sum = a + b;
+    let difference = b - a;
+    let product = a * b;
+    let quotient = b / a;
+    let remainder = b % a;
+
+    //logical operators
+    let is_equal = a == b;
+    let is_greater = a > b;
+    let is_less = a < b;
 }
 ```
