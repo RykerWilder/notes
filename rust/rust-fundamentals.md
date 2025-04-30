@@ -168,6 +168,31 @@ fn main() {
 
 ## Functions
 
+**declaration**
+```rust
+fn main() {
+    //call the function 'greet' to print a message
+    greet();
+}
+
+fn greet() {
+    println!("Hello from the greet function!");
+}
+```
+
+**functions with parameters**
+```rust
+fn main() {
+    //calling the function 'print_number' and passing the value
+    print_number(10);
+}
+
+//this function takes one parameter (a number) and prints it
+fn print_number(num: i32) {
+    println!("The number is {}", num);
+}
+```
+
 ---
 
 ## User Input
