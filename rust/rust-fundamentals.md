@@ -111,3 +111,35 @@ fn main() {
     }
 }
 ```
+
+## Loops
+The loop is an infinite loop until explicitly broken with break.
+
+**loop**
+```rust
+let mut count = 0;
+loop {
+    count += 1;
+    println!("Count: {}", count);
+
+    if count == 5{
+        break; // exit the loop
+    }
+}
+```
+
+**for**
+```rust
+// the for loop is useful for iterating over arrays, ranges, or collections.
+
+let numbers = [10, 20, 30, 40, 50]; //integers array
+
+for number in numbers.iter() {
+    println!("Number: {}", number);
+}
+
+//using a range in for loop
+for i in 1..4 { // ranges are exclusive fpo the upper bound
+    println!("Range value: {}", i);
+}
+```
