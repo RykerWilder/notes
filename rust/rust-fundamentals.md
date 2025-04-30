@@ -150,6 +150,14 @@ fn main() {
 ```
 
 **while**
+the while loop repeats a block of code as long as the condition remains true.
 ```rust
+fn main() {
+    let mut number = 3;
 
+    while number != 0 {
+        println!("{}", number);
+        number -= 1;
+    }
+}
 ```
