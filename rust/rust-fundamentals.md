@@ -52,6 +52,8 @@ fn main() {
 
     // concatenation using {} to format string
     print!("My name is {name} and i am {age} years old.");
+
+    println!("My name is {} and i am {} years old", name, age);
 }
 ```
 
