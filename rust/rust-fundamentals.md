@@ -161,3 +161,28 @@ fn main() {
     }
 }
 ```
+
+## User Input
+
+```rust
+use std::io //import the input/output library
+
+fn main() {
+    //create a mutable String to store the user input
+    let mut name = String::new();
+
+    //prompt the user for input
+    println!("Please enter yout name: ");
+
+    //read the user input and store it in the 'name' variable
+    to::stdin()
+        .read_line(&mut name) // pass a mutable reference of a 'name' to store the input
+        .expect("Failed to import input"); // handle potential input errors
+    
+    // remove the newline character from the input
+    name = name.trim().to_string();
+
+    //print the user's input
+    println!("Hello, {}!", name);
+}
+```
