@@ -114,6 +114,8 @@ fn main() {
 }
 ```
 
+---
+
 ## Loops
 The loop is an infinite loop until explicitly broken with break.
 
@@ -161,6 +163,12 @@ fn main() {
     }
 }
 ```
+
+---
+
+## Functions
+
+---
 
 ## User Input
 
