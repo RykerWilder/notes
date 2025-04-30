@@ -57,6 +57,21 @@ fn main() {
 }
 ```
 
+## Array
+is a group of elements.
+```rust
+fn main() {
+    //creating an array of 3 integers
+    let numbers = [1, 2, 3];
+
+    //accessing the first element (index 0) and printing it
+    println!("The first number is {}", numbers[0]);
+
+    //accessing the second element (index 1) and printing it
+    println!("The second numbers is {}", numbers[1]);
+}
+```
+
 ---
 
 ## Mathematical Operators
