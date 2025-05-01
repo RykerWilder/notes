@@ -3,6 +3,27 @@ Rust is a modern, fast and secure programming language, particularly suitable fo
 
 ---
 
+## How to install
+```bash
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+```
+
+Check the installation.
+```bash
+rustc --version     # Check the compiler version
+cargo --version     # Check the Cargo version
+rustup --version    # Check the rustup version
+```
+
+Update Rust and Cargo.
+```bash
+rustup update
+```
+
+
+
+---
+
 ## Cargo
 The package manager and build system.
 
