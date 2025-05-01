@@ -32,7 +32,7 @@ The package manager and build system.
 cargo new project_name
 ```
 
-**Compilare ed eseguire**
+**Compile and run**
 ```bash
 cargo run
 ```
