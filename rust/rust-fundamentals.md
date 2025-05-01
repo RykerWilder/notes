@@ -3,6 +3,46 @@ Rust is a modern, fast and secure programming language, particularly suitable fo
 
 ---
 
+## Cargo
+The package manager and build system.
+
+**Create new project**
+```bash
+cargo new project_name
+```
+
+**Compilare ed eseguire**
+```bash
+cargo run
+```
+
+**Download and compile dependencies**
+```bash
+cargo build
+```
+
+**Run tests**
+```bash
+cargo test
+```
+
+**Check for errors without compiling**
+```bash
+cargo check
+```
+
+**Format code automatically**
+```bash
+cargo fmt
+```
+
+**Analyze code to improve it**
+```bash
+cargo clippy
+```
+
+---
+
 ## Screen Printing
 
 ```rust
