@@ -21,3 +21,17 @@ image.write(captcha_text, 'CAPTCHA.png')
 
 Image.open('CAPTCHA.png')
 ```
+
+---
+
+### Requirements 
+
+- Python 3.x
+- captcha 
+  ```bash
+  pip install captcha
+  ```
+- Pillow
+  ```bash
+  pip install Pillow
+  ```
