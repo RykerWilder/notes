@@ -6,7 +6,7 @@ How to create fake data in python.
 ```python
 from  faker import Faker
 
-fake = Faker('it_IT', 'en_US', 'ja_JP')
+fake = Faker()
 
 print(fake.name())
 print(fake.address())
