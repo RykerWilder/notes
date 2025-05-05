@@ -1,3 +1,8 @@
+# Generate OTP (One Time Password) in Python
+How to generate OTP in python.
+
+---
+
 ```python
 import secrets
 
@@ -7,3 +12,9 @@ def generate_otp(length=6):
 
 print("Generated OTP: ", generate_otp())
 ```
+
+---
+
+### Requirements 
+
+- Python 3.x
