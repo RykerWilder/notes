@@ -18,6 +18,7 @@
 - **[Create fake data](./python/fake-data.md)**
 - **[Create captcha](./python/create-captcha.md)**
 - **[Send Laptop Notification](./python/send-laptop-notification.md)**
+- **[Generate OTP (One Time Password)](./python/generate-otp.md)**
 
 ---
 
