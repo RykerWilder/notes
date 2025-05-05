@@ -17,6 +17,7 @@
 - **[Use an API to get info about an IP address](./python/IP-API-python.md)**
 - **[Create fake data](./python/fake-data.md)**
 - **[Create captcha](./python/create-captcha.md)**
+- **[Send Laptop Notification](./python/send-laptop-notification.md)**
 
 ---
 
