@@ -1,3 +1,8 @@
+# Check if a website is secure or not
+A simple Python script that checks if a website uses a secure connection (HTTPS) and valid SSL certificates.
+
+---
+
 ```python
 import certifi
 import requests
@@ -23,3 +28,16 @@ if __name__ == "__main__":
         print(f'{website_url} is not a secure website or is unreachable.')
 ```
 
+---
+
+### Requirements 
+
+- Python 3.x
+- requests
+  ```bash
+  pip install requests
+  ```
+- certifi
+  ```bash
+  pip install certifi
+  ```
