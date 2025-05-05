@@ -1,7 +1,6 @@
 # Index
 ---
 
-- **[Download MongoDB via Homebrew](./download-mongodb-brew.md)**
 - **[Linux base commands](./linux-commands.md)**
 
 ---
