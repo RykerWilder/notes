@@ -19,6 +19,7 @@
 - **[Create captcha](./python/create-captcha.md)**
 - **[Send Laptop Notification](./python/send-laptop-notification.md)**
 - **[Generate OTP (One Time Password)](./python/generate-otp.md)**
+- **[Check if a website is secure or not](./python/check-websites-security.md)**
 
 ---
 
