@@ -1,10 +1,6 @@
 # Index
 ---
 
-- **[Linux base commands](./linux-commands.md)**
-
----
-
 ## Encryption
 - **[ROT13 encryption](./encryption/ROT-13.md)**
 - **[Caesar Cipher with Secret Key + Salt](./encryption/ceasar-key-salt.md)**
@@ -29,6 +25,11 @@
 
 ## Cybersecurity Tools
 - **[Nmap](./cybersecurity/nmap.md)**
+
+---
+
+## Linux
+- **[Linux base commands](./linux-commands.md)**
 
 ---
 
