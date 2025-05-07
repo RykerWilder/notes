@@ -29,7 +29,7 @@
 ---
 
 ## Linux
-- **[Linux base commands](./linux-commands.md)**
+- **[Linux base commands](./linux/linux-commands.md)**
 
 ---
 
