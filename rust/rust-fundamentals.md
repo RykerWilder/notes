@@ -97,11 +97,16 @@ fn main() {
 
 **Primitive types**
 ```rust
+use std::{i32}
+
 fn main() {
     let int_val: i32 = 42; // signed 32-bit integer
     let float_val: f64 = 3.14; //64-bit floating point
     let is_active: bool = true; //Boolean
     let char_val: char = "A"; //character
+
+    println!(i32::MAX) //  2147483647
+    println!(i32::MIN) // -2147483647
 }
 ```
 
@@ -202,7 +207,7 @@ fn main() {
     loop {
         count += 1;
         println!("Count: {}", count);
-    
+
         if count == 5{
             break; // exit the loop
         }
@@ -215,11 +220,11 @@ fn main() {
 // the for loop is useful for iterating over arrays, ranges, or collections.
 fn main() {
     let numbers = [10, 20, 30, 40, 50]; //integers array
-    
+
     for number in numbers.iter() {
         println!("Number: {}", number);
     }
-    
+
     //using a range in for loop
     for i in 1..4 { // ranges are exclusive fpo the upper bound
         println!("Range value: {}", i);
@@ -287,7 +292,7 @@ fn main() {
     io::stdin()
         .read_line(&mut name) // pass a mutable reference of a 'name' to store the input
         .expect("Failed to import input"); // handle potential input errors
-    
+
     // remove the newline character from the input
     name = name.trim().to_string();
 
