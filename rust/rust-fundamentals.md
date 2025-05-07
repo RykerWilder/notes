@@ -100,13 +100,13 @@ fn main() {
 use std::{i32}
 
 fn main() {
-    let int_val: i32 = 42; // signed 32-bit integer
-    let float_val: f64 = 3.14; //64-bit floating point
-    let is_active: bool = true; //Boolean
-    let char_val: char = "A"; //character
+    let int_val: i32 = 42;         // signed 32-bit integer
+    let float_val: f64 = 3.14;     //64-bit floating point
+    let is_active: bool = true;    //Boolean
+    let char_val: char = "A";      //character
 
-    println!(i32::MAX) //  2147483647
-    println!(i32::MIN) // -2147483647
+    println!(i32::MAX)             //  2147483647
+    println!(i32::MIN)             // -2147483647
 }
 ```
 
