@@ -30,6 +30,7 @@
 
 ## Linux
 - **[Linux base commands](./linux/linux-commands.md)**
+- **[How to install and customize kitty](./linux/kitty.md)**
 
 ---
 
