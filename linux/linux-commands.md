@@ -286,7 +286,16 @@ tr -d '\n' < file.txt         # Rimuovi a capo
 
 ---
 
+### which
+The which command returns the location of the binary files.
+```bash
+which apache2      # search apache2 path
+```
+
+---
+
 ### find
+The `find` command is the most powerful and flexible way to search for utilities.
 Searches for files.
 ```bash
 find /home -name "*.txt"      # By name
