@@ -280,8 +280,8 @@ grep -A 3 -B 2 "text" file.txt   # Show 3 lines after and 2 before the match
 ### tr
 Replaces or deletes characters.
 ```bash
-tr 'a-z' 'A-Z' < file.txt     # Converti in maiuscolo
-tr -d '\n' < file.txt         # Rimuovi a capo
+tr 'a-z' 'A-Z' < file.txt         # Convert to uppercase
+tr -d '\n' < file.txt             # Remove line breaks
 ```
 
 ---
@@ -309,6 +309,15 @@ Searches for files.
 find /home -name "*.txt"      # By name
 find . -size +1M -type f      # Files >1MB
 find /var/log -mtime -7       # Modified in last 7 days
+```
+
+---
+
+### locate
+The simplest command to use is locate, followed by a specific keyword what to find in the entire file system and it will return every match of the keyword.
+
+```bash
+locate apache2 
 ```
 
 ---
