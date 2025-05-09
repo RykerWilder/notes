@@ -49,6 +49,12 @@ history 10    # Last 10 commands
 !!            # Repeat last command
 ```
 
+### whoami
+Display the current user
+```bash
+whoami
+```
+
 ---
 ---
 ## File navigation and management
