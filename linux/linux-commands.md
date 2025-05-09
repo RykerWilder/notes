@@ -286,6 +286,14 @@ tr -d '\n' < file.txt         # Rimuovi a capo
 
 ---
 
+### whereis
+Returns the location of the file, but also the source and man page if they exist, of a binary file.
+```bash
+whereis apache2 
+```
+
+---
+
 ### which
 The which command returns the location of the binary files.
 ```bash
