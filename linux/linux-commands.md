@@ -148,10 +148,13 @@ When creating multiple files, `touch` accepts multiple filenames as arguments. T
 The `cat` command displays the contents of files or combines multiple files into one. It's commonly used for viewing short files or for combining text files.
 
 ```bash
-cat file.txt                # Display file content
-cat file1 file2             # Display contents of multiple files
-cat file1 file2 > combined  # Combine files into a new file
-cat >> file.txt             # Append text to a file (type Ctrl+D to end)
+cat file.txt                  # Display file content
+cat file1 file2               # Display contents of multiple files
+cat file1 file2 > combined    # Combine files into a new file
+cat >> file.txt               # Append text to a file (type Ctrl+D to end)
+cat file\ with\ spaces.txt    # Read a file with spaces in the name
+cat -- -f                     # Explicitly tells cat: "treat -f as a file"
+cat -- --data.txt             # Works for double-dash names
 ```
 
 For large files, alternatives like `less` or `more` are often more appropriate as they provide pagination. The `cat` command gets its name from "concatenate" because one of its primary functions is to combine files.
