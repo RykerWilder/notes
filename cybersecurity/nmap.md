@@ -95,14 +95,6 @@ nmap 192.168.1.0/24 --excludefile exclude.txt
 | `--osscan-limit` | Limit OS scan to promising targets |
 | `--osscan-guess` | Guess OS aggressively |
 
-## NSE (Nmap Scripting Engine)
-
-| Parameter | Description | Example |
-|-----------|-------------|---------|
-| `-sC` | Default scripts | `nmap -sC 192.168.1.1` |
-| `--script` | Specific script(s) | `nmap --script vuln 192.168.1.1` |
-| `--script-args` | Script arguments | `nmap --script http-enum --script-args http-enum.basepath=/admin/ 192.168.1.1` |
-
 ## Timing and Performance
 
 | Parameter | Description |
