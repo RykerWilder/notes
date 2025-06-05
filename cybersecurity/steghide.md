@@ -47,10 +47,11 @@ steghide [command] [options] [file]
 
 ## Main commands
 ```bash
-steghide embed -cf cover_image.jpg -ef secret_file.txt    # Hide a file
-steghide extract -sf image_with_data.jpg                  # Extract a hidden file
-steghide info image.jpg                                   # Get information
-steghide encinfo                                          # Information on encryption algorithms
+steghide embed -cf cover_image.jpg -ef secret_file.txt            # Hide a file
+steghide embed -cf photo.jpg -ef segret_file.txt -p "mypassword"  # Hide a file with password
+steghide extract -sf image_with_data.jpg                          # Extract a hidden file
+steghide info image.jpg                                           # Get information
+steghide encinfo                                                  # Information on encryption algorithms
 ```
 
 ---
@@ -58,36 +59,19 @@ steghide encinfo                                          # Information on encry
 ## Parameters and detailed options
 
 ### General Options
-| Parameter | Description | Example |
-|-----------|-------------|---------|
-| `-cf, --coverfile` | Specifies the cover file (container) | `-cf image.jpg` |
-| `-ef, --embedfile` | File to hide | `-ef document.pdf` |
-| `-sf, --stegofile` | Steganographic file (output) | `-sf output.jpg` |
-| `-xf, --extractfile` | Name of extracted file | `-xf extracted.txt` |
-
-### Security options
-| Parameter | Description | Example |
-|-----------|-------------|---------|
-| `-p, --passphrase` | Password to protect data | `-p "mysecretpassword"` |
-| `-P, --prompt` | Requires password interactively | `-P` |
-| `-e, --encryption` | Encryption algorithm | `-e rijndael-128` |
-
-### Compression options
-| Parameter | Description | Example |
-|-----------|-------------|---------|
-| `-z, --compress` | Compression level (1-9) | `-z 6` |
-| `-Z, --dontcompress` | Disable compression | `-Z` |
-
-### Output options
-| Parameter | Description | Example |
-|-----------|-------------|---------|
-| `-v, --verbose` | Detailed output | `-v` |
-| `-q, --quiet` | Silent mode | `-q` |
-| `-f, --force` | Force overwrite existing files | `-f` |
-
-### Advanced options
-| Parameter | Description | Example |
-|-----------|-------------|---------|
-| `-N, --dontembedname` | Does not incorporate the file name | `-N` |
-| `-w, --checksum` | Adds checksum for integrity verification | `-w` |
-
+| Parameter | Description | 
+|-----------|-------------|
+| `-cf, --coverfile` | Specifies the cover file (container) 
+| `-ef, --embedfile` | File to hide 
+| `-sf, --stegofile` | Steganographic file (output) 
+| `-xf, --extractfile` | Name of extracted file
+| `-p, --passphrase` | Password to protect data |
+| `-P, --prompt` | Requires password interactively |
+| `-e, --encryption` | Encryption algorithm |
+| `-z, --compress` | Compression level (1-9) |
+| `-Z, --dontcompress` | Disable compression |
+| `-v, --verbose` | Detailed output |
+| `-q, --quiet` | Silent mode |
+| `-f, --force` | Force overwrite existing files |
+| `-N, --dontembedname` | Does not incorporate the file name |
+| `-w, --checksum` | Adds checksum for integrity verification |
