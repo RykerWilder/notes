@@ -56,9 +56,8 @@ steghide encinfo                                                  # Information 
 
 ---
 
-## Parameters and detailed options
+## Parameters
 
-### General Options
 | Parameter | Description | 
 |-----------|-------------|
 | `-cf, --coverfile` | Specifies the cover file (container) 
