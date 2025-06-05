@@ -1,100 +1,93 @@
 # Steghide
 
-## Introduction
+Steghide is a steganography tool that allows you to hide files within images and audio files without visibly altering their appearance.
 
-Steghide is a steganography tool that allows you to hide files within images and audio files without visibly altering its appearance.
+---
 
 ## What Steghide is for
-
 Steghide is used for:
-
-- ** Hide sensitive documents ** within harmless images
-- ** secret communications ** through apparently normal channels
-- ** hidden backups ** of critical information
-- ** IT security ** to hide digital tests
-- ** Privacy ** to protect personal data
-- ** Forensic research ** to identify hidden data
+- **Hide sensitive documents** within harmless images
+- **Secret communications** through apparently normal channels
+- **Hidden backups** of critical information
+- **IT security** to hide digital evidence
+- **Privacy** to protect personal data
+- **Forensic research** to identify hidden data
 
 ## Supported formats
 
 ### File Cover (containers)
-- ** jpeg ** (.jpg, .jpeg)
-- ** BMP ** (.bmp)
-- ** WAV ** (.wav)
-- ** au ** (.au)
-
-With Steghide you can hide any type of file (text, images, documents, archives ...)
-
-## General syntax
-
-`` `Bash
-Steghide [Command] [Options] [File]
-`` ``
-
-## main commands
-
-`` `Bash
-Steghide Embed -CF Image_Cover.jpg -ef File_segreto.txt # Hide a file
-Steghide Extract -Sf Image_con_dati.jpg # Extract a hidden file
-Steghide Info Image.jpg # Get information
-Steghide Encinfo # Information on encryption algorithms
-`` ``
-
-
-## parameters and detailed options
-
-### General Options
-
-| Parameter | Description | Example |
-|--- |-------
-| `` -CF,--Colli` | Specifies the Cover File (container) | `` -CF Image.jpg` |
-| `-EF,--Embedfile` | Files to hide | `-EF document.pdf` |
-| `` -SF,--STEGOFILE` | Steganographic files (output) | `` -SF Output.jpg` |
-| `` -xf, ---Extractfile` | Extract file name | `` -xf extracted.txt` |
-
-### Security options
-
-| Parameter | Description | Example |
-|--- |-------
-| `` -P,--Passphrase` | Password to protect data | `-P" Miasecretpassword "` |
-| `` -P, ---prompt '| Requires passwords interactively | `` -P` |
-| ``-and,-encryptionis | Encryption algorithm | `-and Rijndael-128` |
-
-### compression options
-
-| Parameter | Description | Example |
-|--- |-------
-| `` -Z,--Compress` | Compression level (1-9) | `` -Z 6` |
-| `` -Z,-Dontcompress` | Disable compression | `` -Z` |
-
-### Output options
-
-| Parameter | Description | Example |
-|--- |-------
-| `` -V,--verbose` | Detailed output | ``v` |
-| `` -q,--provide | Silent mode | `` -q` |
-| `` -F,--Force` | Force overwritten existing files | `` -F` |
-
-### Advanced Options
-
-| Parameter | Description | Example |
-|--- |-------
-| `` -N,--Dontembedname '| The file name does not incorporate | `` N '|
-| `` -W,-CECKSUM '| Adds checksum for integrity verification | `` -W` |
+- **JPEG** (.jpg, .jpeg)
+- **BMP** (.bmp)
+- **WAV** (.wav)
+- **AU** (.au)
 
 ## Supported encryption algorithms
-
 Steghide supports several encryption algorithms:
+- **rijndael-128** (AES-128) - Default
+- **rijndael-192** (AES-192)
+- **rijndael-256** (AES-256)
+- **arcfour** (RC4)
+- **blowfish**
+- **xtea**
+- **saferplus**
+- **wake**
+- **pc1**
+- **serpent**
+- **rijndael** (AES with variable key)
+- **sapphire**j
 
-- **Rijndael-128** (AES-128)- Default
-- **Rijndael-192** (AES-192)
-- **Rijndael-256** (AES-256)
-- **Arcfour** (RC4)
-- **Blowfish**
-- **XTEA**
-- **SAFFFLUS**
-- **Wake**
-- **PC1**
-- **Serpent**
-- **Rijndael** (AES with variable key)
-- **SAPPHIRE**
+With Steghide you can hide any type of file (text, images, documents, archives, etc.)
+
+---
+
+## General syntax
+```bash
+steghide [command] [options] [file]
+```
+
+## Main commands
+```bash
+steghide embed -cf cover_image.jpg -ef secret_file.txt    # Hide a file
+steghide extract -sf image_with_data.jpg                  # Extract a hidden file
+steghide info image.jpg                                   # Get information
+steghide encinfo                                          # Information on encryption algorithms
+```
+
+---
+
+## Parameters and detailed options
+
+### General Options
+| Parameter | Description | Example |
+|-----------|-------------|---------|
+| `-cf, --coverfile` | Specifies the cover file (container) | `-cf image.jpg` |
+| `-ef, --embedfile` | File to hide | `-ef document.pdf` |
+| `-sf, --stegofile` | Steganographic file (output) | `-sf output.jpg` |
+| `-xf, --extractfile` | Name of extracted file | `-xf extracted.txt` |
+
+### Security options
+| Parameter | Description | Example |
+|-----------|-------------|---------|
+| `-p, --passphrase` | Password to protect data | `-p "mysecretpassword"` |
+| `-P, --prompt` | Requires password interactively | `-P` |
+| `-e, --encryption` | Encryption algorithm | `-e rijndael-128` |
+
+### Compression options
+| Parameter | Description | Example |
+|-----------|-------------|---------|
+| `-z, --compress` | Compression level (1-9) | `-z 6` |
+| `-Z, --dontcompress` | Disable compression | `-Z` |
+
+### Output options
+| Parameter | Description | Example |
+|-----------|-------------|---------|
+| `-v, --verbose` | Detailed output | `-v` |
+| `-q, --quiet` | Silent mode | `-q` |
+| `-f, --force` | Force overwrite existing files | `-f` |
+
+### Advanced options
+| Parameter | Description | Example |
+|-----------|-------------|---------|
+| `-N, --dontembedname` | Does not incorporate the file name | `-N` |
+| `-w, --checksum` | Adds checksum for integrity verification | `-w` |
+
