@@ -25,6 +25,7 @@
 
 ## Cybersecurity Tools
 - **[Nmap](./cybersecurity/nmap.md)**
+- **[John The Ripper](./cybersecurity/john-the-ripper.md)**
 
 ---
 
