@@ -1,81 +1,136 @@
 # Nmap
-Nmap is free software released under the GNU GPL license and was developed to perform port scanning activities, both locally and remotely, on single IP addresses – private or public – or on user-specified ranges in order to determine the presence of open ports.
 
----
+Nmap (Network Mapper) is a free open-source tool for network discovery and security auditing. It is considered one of the most powerful and versatile tools for network exploration, host discovery, service detection, and security assessment.
 
-### Scan single hosts or IP ranges:
+## What Nmap is Used For
 
-```bash
-nmap 192.168.1.1         # Scan a single IP
-nmap 192.168.1.1-100     # Scan a range of IPs
-nmap 192.168.1.0/24      # Scan a subnet 
-nmap scanme.nmap.org     # Scan a domain
-```
+- **Network Discovery**: Discovering active hosts in a network
+- **Port Scanning**: Identifying open ports on specific targets
+- **Service Detection**: Detecting services and versions running
+- **OS Detection**: Identifying the operating system of targets
+- **Vulnerability Assessment**: Detecting potential vulnerabilities
+- **Network Mapping**: Creating topological maps of networks
+- **Security Auditing**: Evaluating network and system security
+- **Penetration Testing**: Information gathering during pentests
 
----
-
-### Port Scanning
-
-```bash
-nmap -p 80,443 192.168.1.1         # Scan specific ports
-nmap -p- 192.168.1.1               # Scan ALL ports (1-65535)
-nmap --top-ports 10 192.168.1.1    # Scan the 10 most common ports
-```
-
----
-
-### Scan Types (TCP/UDP)
+## General Syntax
 
 ```bash
-nmap -sS 192.168.1.1     # SYN Scan (stealth, does not complete TCP connection)
-nmap -sT 192.168.1.1     # TCP Connect Scan (slower, but more reliable)
-nmap -sU 192.168.1.1     # UDP Scan (important for DNS, DHCP, SNMP)
-nmap -sA 192.168.1.1     # ACK Scan (useful for bypassing firewalls)
+nmap [Scan Type] [Options] {target specification}
 ```
 
----
+## Target Specification
 
-### Operating System and Services Detection
+| Format | Description | Example |
+|---------|-------------|---------|
+| Single IP | A single IP address | `192.168.1.1` |
+| IP Range | Range of IP addresses | `192.168.1.1-100` |
+| CIDR Subnet | CIDR notation | `192.168.1.0/24` |
+| Hostname | Domain name | `example.com` |
+| IP List | Space-separated list | `192.168.1.1 192.168.1.5` |
+| Input File | File with target list | `-iL targets.txt` |
+| Random targets | Random targets | `-iR 100` |
+
+### Target Exclusion
 
 ```bash
-nmap -O 192.168.1.1     # Detect OS
-nmap -sV 192.168.1.1    # Detect service versions
-nmap -A 192.168.1.1     # Aggressive scan (OS, services, scripts)
+# Exclude specific hosts
+nmap 192.168.1.0/24 --exclude 192.168.1.1,192.168.1.5
+
+# Exclude from file
+nmap 192.168.1.0/24 --excludefile exclude.txt
 ```
 
----
+## Host Discovery
 
-### Scripting with NSE (Nmap Scripting Engine)
+| Parameter | Description | Example |
+|-----------|-------------|---------|
+| `-sn` | Ping scan (no port scan) | 
+| `-Pn` | Skip host discovery |
+| `-PS` | TCP SYN ping | `nmap -PS22,80,443 192.168.1.1` |
+| `-PA` | TCP ACK ping | `nmap -PA80 192.168.1.1` |
+| `-PU` | UDP ping | `nmap -PU53 192.168.1.1` |
+| `-PE` | ICMP echo ping | `nmap -PE 192.168.1.1` |
+| `-PP` | ICMP timestamp ping |
+| `-PM` | ICMP netmask ping |
 
-```bash
-nmap --script=http-title 192.168.1.1           # Read the title of the web page
-nmap --script=vuln 192.168.1.1                 # Search for common vulnerabilities
-nmap --script=ssl-enum-ciphers 192.168.1.1     # Test SSL/TLS ciphers
-```
+## Port Scanning
 
----
+| Parameter | Description |
+|-----------|-------------|
+| `-sS` | TCP SYN scan (stealth) |
+| `-sT` | TCP connect scan |
+| `-sU` | UDP scan |
+| `-sA` | TCP ACK scan |
+| `-sW` | TCP Window scan |
+| `-sM` | TCP Maimon scan |
+| `-sF` | FIN scan |
+| `-sX` | Xmas scan |
+| `-sN` | Null scan |
 
-### Optimization and Useful Options
+## Port Specification
 
-```bash
-nmap -T4 192.168.1.1             # Fast (aggressive) mode
-nmap -Pn 192.168.1.1             # Ignore ping (useful if ICMP is blocked)
-nmap -v 192.168.1.1              # Verbose output
-nmap -oN scan.txt 192.168.1.1    # Save the result to a file
-```
+| Parameter | Description | Example |
+|-----------|-------------|---------|
+| `-p` | Specific ports | `nmap -p 22,80,443 192.168.1.1` |
+| `-p-` | All ports (1-65535) | `nmap -p- 192.168.1.1` |
+| `-p1-1000` | Port range | `nmap -p1-1000 192.168.1.1` |
+| `--top-ports` | Top N most common ports | `nmap --top-ports 100 192.168.1.1` |
+| `-F` | Fast scan (100 common ports) | `nmap -F 192.168.1.1` |
 
----
+## Service and Version Detection
 
-### Timing Template
-| Template      | Options    | Speed ​          ​| Description
-|---------------|------------|-----------------|-----------------------------------------------
-| **Paranoid**  | `-T0`      | Very slow       | 1 pkt every 5 min (extreme IDS evasion)
-| **Sneaky**    | `-T1`      | Slow            | 1 pkt every 15 sec (IDS evasion)
-| **Polite**    | `-T2`      | Moderate        | 1 pkt every 0.4 sec (minimal noise)
-| **Normal**    | `-T3`      | Default         | Balanced between speed and reliability
-| **Aggressive**| `-T4`      | Fast            | Low timeouts, more parallelism
-| **Insane**    | `-T5`      | Maximum         | Low timeouts, maximum parallelism
+| Parameter | Description |
+|-----------|-------------|
+| `-sV` | Version detection |
+| `--version-intensity` | Detection intensity (0-9) |
+| `--version-light` | Light detection |
+| `--version-all` | Try all probes |
 
----
+## OS Detection
 
-Only use Nmap on networks you have permission to scan, it's illegal on other people's networks.
+| Parameter | Description |
+|-----------|-------------|
+| `-O` | OS detection |
+| `--osscan-limit` | Limit OS scan to promising targets |
+| `--osscan-guess` | Guess OS aggressively |
+
+## NSE (Nmap Scripting Engine)
+
+| Parameter | Description | Example |
+|-----------|-------------|---------|
+| `-sC` | Default scripts | `nmap -sC 192.168.1.1` |
+| `--script` | Specific script(s) | `nmap --script vuln 192.168.1.1` |
+| `--script-args` | Script arguments | `nmap --script http-enum --script-args http-enum.basepath=/admin/ 192.168.1.1` |
+
+## Timing and Performance
+
+| Parameter | Description |
+|-----------|-------------|
+| `-T0` | Paranoid (very slow) |
+| `-T1` | Sneaky (slow) |
+| `-T2` | Polite (slow) |
+| `-T3` | Normal (default) |
+| `-T4` | Aggressive (fast) |
+| `-T5` | Insane (very fast) |
+
+## Output Options
+
+| Parameter | Description | Example |
+|-----------|-------------|---------|
+| `-oN` | Normal output | `nmap -oN scan.txt 192.168.1.1` |
+| `-oX` | XML output | `nmap -oX scan.xml 192.168.1.1` |
+| `-oG` | Grepable output | `nmap -oG scan.gnmap 192.168.1.1` |
+| `-oA` | All formats | `nmap -oA scan 192.168.1.1` |
+
+## Firewall/IDS Evasion
+
+| Parameter | Description |
+|-----------|-------------|
+| `-f` | Fragment packets |
+| `--mtu` | Set MTU size |
+| `-D` | Decoy scan |
+| `-S` | Spoof source address |
+| `--source-port` | Spoof source port |
+| `--data-length` | Append random data |
+
