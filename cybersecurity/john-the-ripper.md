@@ -1,86 +1,85 @@
 # John The Ripper
 
-John the Ripper (spesso abbreviato come "John" o "JtR") è uno dei più popolari e potenti strumenti per il password cracking e l'auditing della sicurezza delle password. È un tool open-source sviluppato per testare la robustezza delle password attraverso attacchi di tipo brute force e dictionary attack.
+John The Ripper (often abbreviated as "John" or "Jtr") is one of the most popular and powerful tools for the password cracking and auditing of password safety. It is an open-source tool developed to test the robustness of passwords through Brute Force and Dictionary Attack attacks.
 
-## A cosa serve
+## What it is for
 
-John the Ripper è utilizzato principalmente per:
+John The Ripper is mainly used for:
 
-- **Auditing della sicurezza**: Testare la robustezza delle password in sistemi aziendali
-- **Penetration testing**: Valutare la sicurezza durante test di penetrazione
-- **Recupero password**: Recuperare password dimenticate (su sistemi di proprietà)
-- **Formazione sulla sicurezza**: Dimostrare l'importanza di password robuste
-- **Ricerca sulla sicurezza**: Analizzare algoritmi di hashing e vulnerabilità
+- ** Safety auditing **: Testing the robustness of passwords in corporate systems
+- ** penetration testing **: evaluate safety during penetration tests
+- ** Password recovery **: recover forgotten passwords (on ownership systems)
+- ** Security training **: demonstrate the importance of robust passwords
+- ** Safety research **: analyze hashing and vulnerability algorithms
 
 
-## Comandi Base
+## Basic commands
 
-### Sintassi generale
-```bash
-john [opzioni] [file_password]
-```
+### General syntax
+`` `Bash
+John [Options] [File_Password]
+`` ``
 
-### Comandi principali
+### Main commands
 
-#### Crack di base
-```bash
-john password_file                                  # Crack con dizionario predefinito
-john --wordlist=dizionario.txt password_file        # Crack con dizionario personalizzato
-john --rules password_file                          # Crack con regole di mutazione
-```
+#### Basic Crack
+`` `Bash
+John Password_file # Crack with default dictionary
+John - -Wordlist = Dictionary.txt Password_file # Crack with personalized dictionary
+John - -Rules Password_file # Crack with mutation rules
+`` ``
 
-#### Modalità specifiche
-```bash
+#### specific mode
+`` `Bash
 
-john --incremental password_file      # Modalità incrementale (brute force)
-john --single password_file           # Modalità single crack
-john --external=MODE password_file    # Modalità esterna
-```
+John -Incremental password_file # incremental mode (Brute Force)
+John - -Single Password_file # Single Crack mode
+John -EXALERAL = Mode Password_file # external mode
+`` ``
 
-## Parametri e Opzioni Principali
+## Parameters and main options
 
-### Opzioni di Input/Output
+### Input/output options
 
-| Parametro | Descrizione | Esempio |
-|-----------|-------------|---------|
-| `--show` | Mostra le password già craccate | `john --show hashes.txt` |
-| `--users=LOGIN` | Cracca solo utenti specifici | `john --users=admin,root hashes.txt` |
+| Parameter | Description | Example |
+|--- |-------
+| ``-Show` | Show passwords already crap | `JOHN - -SHOW HASHES.TXT '|
+| `-ESSERS = Login` | Cracca Only specific users | `JOHN -ESUS = Admin, Root Hashes.txt` |
 
-### Modalità di Attacco
+### Attack mode
 
-| Parametro | Descrizione | Esempio |
-|-----------|-------------|---------|
-| `--single` | Modalità single crack (usa info utente) | `john --single passwd` |
-| `--wordlist` | Attacco con dizionario | `john --wordlist=dict.txt hashes.txt` |
-| `--incremental` | Brute force incrementale | `john --incremental:alpha passwd` |
-| `--external=MODE` | Usa modalità esterna personalizzata | `john --external=Filter_Alpha passwd` |
+| Parameter | Description | Example |
+|--- |-------
+| ``--Single` | Single Crack mode (Use User Info) | `John - -Single Passwd` |
+| `--Wordlist` | Attack with dictionary | `John - -Wordlist = DicT.Txt Hashes.txt` |
+| `--incretional '| Brute Force incremental | `John -Incremental: Alpha Passwd` |
+| `---Exalal = Mode` | Use Personalized external mode | `JOHN -EXALERAL = FILTER_ALPHA PASSWD '|
 
-### Regole e Mutazioni
+### rules and mutations
 
-| Parametro | Descrizione | Esempio |
-|-----------|-------------|---------|
-| `--rules` | Applica regole di mutazione | `john --rules --wordlist=dict.txt passwd` |
-| `--rules=SECTION` | Usa regole specifiche | `john --rules=Wordlist passwd` |
+| Parameter | Description | Example |
+|--- |-------
+| `--Rules` | Apply mutation rules | `John - -Rules - -Wordlist = dict.txt passwd` |
+| `--Rules = Sectionis | Use specific rules | `John - -Rules = wordlist passwd` |
 
-### Formato e Hash
+### format and hash
 
-| Parametro | Descrizione | Esempio |
-|-----------|-------------|---------|
-| `--format=FORMAT` | Specifica il formato hash | `john --format=md5 hashes.txt` |
-| `--list=formats` | Lista tutti i formati supportati | `john --list=formats` |
+| Parameter | Description | Example |
+|--- |-------
+| `--Format = format | Specifies the hash format | `John - -Format = MD5 Hashes.Txt` |
+| `-List = formats` | List of all supported formats | `John -List = formats` |
 
-### Sessioni e Restore
+### Sessions and restore
 
-| Parametro | Descrizione | Esempio |
-|-----------|-------------|---------|
-| `--session=NAME` | Nomina la sessione | `john --session=test1 passwd` |
-| `--restore=NAME` | Ripristina una sessione | `john --restore=test1` |
-| `--status=NAME` | Mostra stato della sessione | `john --status=test1` |
+| Parameter | Description | Example |
+|--- |-------
+| `--Session = Name` | Appoint the session | `JOHN -SESSION = Test1 Passwd` |
+| `- Restore a session | `John -Verore = Test1` |
+| `-Status = Name` | Exhibition of the session status | `John -Status = Test1` |
 
-### Performance e Ottimizzazione
+### Performance and optimization
 
-| Parametro | Descrizione | Esempio |
-|-----------|-------------|---------|
-| `--fork=N` | Usa N processi paralleli | `john --fork=4 passwd` |
-| `--node=M/N` | Distribuito: nodo M di N | `john --node=1/4 passwd` |
-
+| Parameter | Description | Example |
+|--- |-------
+| `--Fork = n '| USA n Parallel processes | `John - -Fork = 4 Passwd` |
+| `-Node = m/n '| Distributed: node m of n | `John -Node = 1/4 Passwd` |
