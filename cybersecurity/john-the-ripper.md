@@ -24,62 +24,34 @@ John [Options] [File_Password]
 
 #### Basic Crack
 ```Bash
-John Password_file # Crack with default dictionary
-John - -Wordlist = Dictionary.txt Password_file # Crack with personalized dictionary
-John - -Rules Password_file # Crack with mutation rules
+John Password_file                                  # Crack with default dictionary
+John - -Wordlist = Dictionary.txt Password_file     # Crack with personalized dictionary
+John - -Rules Password_file                         # Crack with mutation rules
 ```
 
 #### specific mode
 ```Bash
-
-John -Incremental password_file # incremental mode (Brute Force)
-John - -Single Password_file # Single Crack mode
-John -EXALERAL = Mode Password_file # external mode
+John -Incremental password_file         # incremental mode (Brute Force)
+John - -Single Password_file            # Single Crack mode
+John -EXALERAL = Mode Password_file     # external mode
 ```
 
-## Parameters and main options
+## Parameters
 
-### Input/output options
-
-| Parameter | Description | Example |
+| Parameter | Description |
 |--- |-------
-| `-Show` | Show passwords already crap | `JOHN - -SHOW HASHES.TXT `|
-| `-ESSERS = Login` | Cracca Only specific users | `JOHN -ESUS = Admin, Root Hashes.txt` |
-
-### Attack mode
-
-| Parameter | Description | Example |
-|--- |-------
-| `--Single` | Single Crack mode (Use User Info) | `John - -Single Passwd` |
-| `--Wordlist` | Attack with dictionary | `John - -Wordlist = DicT.Txt Hashes.txt` |
-| `--incretional`| Brute Force incremental | `John -Incremental: Alpha Passwd` |
-| `---Exalal = Mode` | Use Personalized external mode | `JOHN -EXALERAL = FILTER_ALPHA PASSWD`|
-
-### Rules and mutations
-
-| Parameter | Description | Example |
-|--- |-------
-| `--Rules` | Apply mutation rules | `John - -Rules - -Wordlist = dict.txt passwd` |
-| `--Rules = Sectionis` | Use specific rules| `John - -Rules = wordlist passwd` |
-
-### format and hash
-
-| Parameter | Description | Example |
-|--- |-------
-| `--Format = format` | Specifies the hash format | `John - -Format = MD5 Hashes.Txt` |
-| `-List = formats` | List of all supported formats | `John -List = formats` |
-
-### Sessions and restore
-
-| Parameter | Description | Example |
-|--- |-------
-| `--Session = Name` | Appoint the session | `JOHN -SESSION = Test1 Passwd` |
-| `- Restore a session` | `John -Verore = Test1` |
-| `-Status = Name` | Exhibition of the session status | `John -Status = Test1` |
-
-### Performance and optimization
-
-| Parameter | Description | Example |
-|--- |-------
-| `--Fork = n`| USA n Parallel processes | `John - -Fork = 4 Passwd` |
-| `-Node = m/n`| Distributed: node m of n | `John -Node = 1/4 Passwd` |
+| `-Show` | Show passwords already crap |
+| `-ESSERS = Login` | Cracca Only specific users |
+| `--Single` | Single Crack mode (Use User Info) |
+| `--Wordlist` | Attack with dictionary |
+| `--incretional`| Brute Force incremental |
+| `---Exalal = Mode` | Use Personalized external mode |
+| `--Rules` | Apply mutation rules |
+| `--Rules = Sectionis` | Use specific rules|
+| `--Format = format` | Specifies the hash format |
+| `-List = formats` | List of all supported formats |
+| `--Session = Name` | Appoint the session |
+| `- Restore a session` |
+| `-Status = Name` | Exhibition of the session status |
+| `--Fork = n`| USA n Parallel processes |
+| `-Node = m/n`| Distributed: node m of n |
