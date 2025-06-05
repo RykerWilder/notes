@@ -16,33 +16,6 @@ John the Ripper è utilizzato principalmente per:
 - **Formazione sulla sicurezza**: Dimostrare l'importanza di password robuste
 - **Ricerca sulla sicurezza**: Analizzare algoritmi di hashing e vulnerabilità
 
-## Formati supportati
-
-John supporta numerosi formati di hash, tra cui:
-- Unix DES e MD5
-- Windows LM e NTLM
-- Kerberos AFS
-- Hash MySQL, PostgreSQL
-- PDF, ZIP, RAR protetti da password
-- E molti altri...
-
-## Installazione
-
-### Linux (Ubuntu/Debian)
-```bash
-sudo apt-get update
-sudo apt-get install john
-```
-
-### Linux (da sorgenti)
-```bash
-git clone https://github.com/openwall/john.git
-cd john/src
-make clean generic
-```
-
-### Windows
-Scaricare la versione precompilata dal sito ufficiale di John the Ripper.
 
 ## Comandi Base
 
@@ -55,26 +28,17 @@ john [opzioni] [file_password]
 
 #### Crack di base
 ```bash
-# Crack con dizionario predefinito
-john password_file
-
-# Crack con dizionario personalizzato
-john --wordlist=dizionario.txt password_file
-
-# Crack con regole di mutazione
-john --rules password_file
+john password_file                                  # Crack con dizionario predefinito
+john --wordlist=dizionario.txt password_file        # Crack con dizionario personalizzato
+john --rules password_file                          # Crack con regole di mutazione
 ```
 
 #### Modalità specifiche
 ```bash
-# Modalità incrementale (brute force)
-john --incremental password_file
 
-# Modalità single crack
-john --single password_file
-
-# Modalità esterna
-john --external=MODE password_file
+john --incremental password_file      # Modalità incrementale (brute force)
+john --single password_file           # Modalità single crack
+john --external=MODE password_file    # Modalità esterna
 ```
 
 ## Parametri e Opzioni Principali
