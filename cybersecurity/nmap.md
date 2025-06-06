@@ -34,11 +34,8 @@ nmap [Scan Type] [Options] {target specification}
 ### Target Exclusion
 
 ```bash
-# Exclude specific hosts
-nmap 192.168.1.0/24 --exclude 192.168.1.1,192.168.1.5
-
-# Exclude from file
-nmap 192.168.1.0/24 --excludefile exclude.txt
+nmap 192.168.1.0/24 --exclude 192.168.1.1,192.168.1.5     # Exclude specific hosts
+nmap 192.168.1.0/24 --excludefile exclude.txt             # Exclude from file
 ```
 
 ## Host Discovery
