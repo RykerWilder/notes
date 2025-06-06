@@ -2,8 +2,6 @@
 
 Steghide is a steganography tool that allows you to hide files within images and audio files without visibly altering their appearance.
 
----
-
 ## What Steghide is for
 Steghide is used for:
 - **Hide sensitive documents** within harmless images
@@ -38,8 +36,6 @@ Steghide supports several encryption algorithms:
 
 With Steghide you can hide any type of file (text, images, documents, archives, etc.)
 
----
-
 ## General syntax
 ```bash
 steghide [command] [options] [file]
@@ -53,8 +49,6 @@ steghide extract -sf image_with_data.jpg                          # Extract a hi
 steghide info image.jpg                                           # Get information
 steghide encinfo                                                  # Information on encryption algorithms
 ```
-
----
 
 ## Parameters
 
