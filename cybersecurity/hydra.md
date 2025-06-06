@@ -37,6 +37,16 @@ hydra -l username -p password target_ip protocol
 hydra -L userlist.txt -P passlist.txt target_ip protocol
 ```
 
+### Comandi essenziali
+```bash
+hydra -l root -P passwords.txt target ssh # SSH brute force base
+hydra -l admin -P passwords.txt target http-post-form "/login:user=^USER^&pass=^PASS^:Failed" # HTTP form attack
+hydra -l ftp -P passwords.txt target ftp  # FTP brute force
+hydra -L users.txt -P passwords.txt -M targets.txt ssh # Multiple targets
+hydra -l admin -P passwords.txt -o results.txt target ssh # Con output file
+hydra -l admin -P passwords.txt -t 16 -f target ssh # Fast attack
+```
+
 ## Opzioni Principali
 
 | Parametro | Descrizione |
@@ -74,104 +84,32 @@ hydra -L userlist.txt -P passlist.txt target_ip protocol
 hydra -l root -P passwords.txt 192.168.1.100 ssh # Attacco base SSH
 hydra -l admin -P rockyou.txt -s 2222 192.168.1.100 ssh # SSH con porta personalizzata
 hydra -L users.txt -P passwords.txt 192.168.1.100 ssh # SSH con lista di utenti
-
-# SSH con threading ottimizzato
-hydra -l root -P passwords.txt -t 4 192.168.1.100 ssh
+hydra -l root -P passwords.txt -t 4 192.168.1.100 ssh # SSH con threading ottimizzato
 ```
-
-
-
 
 ### HTTP Basic Authentication
 ```bash
-# HTTP Basic Auth
-hydra -l admin -P passwords.txt 192.168.1.100 http-get /admin/
-
-# HTTPS Basic Auth
-hydra -l admin -P passwords.txt -S 192.168.1.100 https-get /secure/
+hydra -l admin -P passwords.txt 192.168.1.100 http-get /admin/  # HTTP Basic Auth
+hydra -l admin -P passwords.txt -S 192.168.1.100 https-get /secure/  # HTTPS Basic Auth
 ```
 
 ### Database Attacks
 ```bash
-# MySQL brute force
-hydra -l root -P passwords.txt 192.168.1.100 mysql
-
-# PostgreSQL
-hydra -l postgres -P passwords.txt 192.168.1.100 postgres
-
-# Microsoft SQL Server
-hydra -l sa -P passwords.txt 192.168.1.100 mssql
-
-# MongoDB
-hydra -l admin -P passwords.txt 192.168.1.100 mongodb
+hydra -l root -P passwords.txt 192.168.1.100 mysql  # MySQL brute force
+hydra -l postgres -P passwords.txt 192.168.1.100 postgres  # PostgreSQL
+hydra -l sa -P passwords.txt 192.168.1.100 mssql  # Microsoft SQL Server
+hydra -l admin -P passwords.txt 192.168.1.100 mongodb  # MongoDB
 ```
-
-
-
-
-
-
-
-
-## Ottimizzazione Performance
 
 ### Threading e parallelismo
 ```bash
-# Threading ottimizzato per SSH
-hydra -l root -P passwords.txt -t 4 target ssh
-
-# Max parallelismo per HTTP
-hydra -l admin -P passwords.txt -t 10 -T 64 target http-post-form
-
-# Bilanciamento carico/velocità
-hydra -l admin -P passwords.txt -t 1 -W 2 target ssh
+hydra -l root -P passwords.txt -t 4 target ssh  # Threading ottimizzato per SSH
+hydra -l admin -P passwords.txt -t 10 -T 64 target http-post-form  # Max parallelismo per HTTP
+hydra -l admin -P passwords.txt -t 1 -W 2 target ssh  # Bilanciamento carico/velocità
 ```
 
 ### Gestione timeout
 ```bash
-# Timeout lunghi per connessioni lente
-hydra -l admin -P passwords.txt -w 60 -c 10 target ssh
-
-# Timeout corti per scan veloci
-hydra -l admin -P passwords.txt -w 5 -c 2 target ftp
+hydra -l admin -P passwords.txt -w 60 -c 10 target ssh  # Timeout lunghi per connessioni lente
+hydra -l admin -P passwords.txt -w 5 -c 2 target ftp  # Timeout corti per scan veloci
 ```
-
-
-### Best practices di sicurezza
-```bash
-# Limitare rate per evitare detection
-hydra -l admin -P passwords.txt -W 10 target ssh
-
-# Usare liste utenti realistiche
-hydra -L common_users.txt -P passwords.txt target ssh
-
-# Output sicuro
-hydra -l admin -P passwords.txt -o /tmp/results.txt target ssh
-chmod 600 /tmp/results.txt
-```
-
-
-
-
-### Comandi essenziali
-```bash
-# SSH brute force base
-hydra -l root -P passwords.txt target ssh
-
-# HTTP form attack
-hydra -l admin -P passwords.txt target http-post-form "/login:user=^USER^&pass=^PASS^:Failed"
-
-# FTP brute force
-hydra -l ftp -P passwords.txt target ftp
-
-# Multiple targets
-hydra -L users.txt -P passwords.txt -M targets.txt ssh
-
-# Con output file
-hydra -l admin -P passwords.txt -o results.txt target ssh
-
-# Fast attack
-hydra -l admin -P passwords.txt -t 16 -f target ssh
-```
-
-
