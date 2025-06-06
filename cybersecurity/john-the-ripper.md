@@ -20,8 +20,6 @@ John The Ripper is mainly used for:
 John [Options] [File_Password]
 ```
 
-### Main commands
-
 #### Basic Crack
 ```Bash
 John Password_file                                  # Crack with default dictionary
