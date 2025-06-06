@@ -2,7 +2,7 @@
 
 John The Ripper (often abbreviated as "John" or "Jtr") is one of the most popular and powerful tools for the password cracking and auditing of password safety. It is an open-source tool developed to test the robustness of passwords through Brute Force and Dictionary Attack attacks.
 
-## What it is for
+## What John The Ripper is used for
 
 John The Ripper is mainly used for:
 

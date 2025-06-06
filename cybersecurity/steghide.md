@@ -2,7 +2,7 @@
 
 Steghide is a steganography tool that allows you to hide files within images and audio files without visibly altering their appearance.
 
-## What Steghide is for
+## What Steghide is used for
 Steghide is used for:
 - **Hide sensitive documents** within harmless images
 - **Secret communications** through apparently normal channels

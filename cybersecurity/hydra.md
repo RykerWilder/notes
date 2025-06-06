@@ -2,7 +2,7 @@
 
 Hydra is an open-source penetration testing tool used to perform brute-force attacks against remote authentication services. It's one of the fastest and most flexible tools for testing password strength across various network protocols.
 
-## What Hydra is Used For
+## What Hydra is used For
 
 - **Password Auditing**: Testing the strength of corporate passwords  
 - **Penetration Testing**: Evaluating security during penetration tests  
