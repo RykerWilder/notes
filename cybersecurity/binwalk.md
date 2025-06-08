@@ -42,14 +42,3 @@ binwalk -Me firmware.bin     # Scansione + estrazione ricorsiva
 
 
 ```
-
-### Output Tipico
-
-```
-DECIMAL       HEXADECIMAL     DESCRIPTION
-------------------------------------------------------------------------
-0             0x0             JFFS2 filesystem, little endian
-14680         0x3958          LZMA compressed data, dictionary size: 65536
-1441116       0x15FE5C        Linux kernel version 2.6.21.7
-1454296       0x1631D8        gzip compressed data, maximum compression
-```
