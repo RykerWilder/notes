@@ -1,44 +1,43 @@
 # Binwalk
 
-Binwalk è uno strumento di analisi per file binari che permette di identificare, estrarre e analizzare firmware, immagini di sistema e altri file binari complessi. È molto utilizzato in sicurezza informatica, reverse engineering e analisi di dispositivi IoT.
+Binwalk is a binary file analysis tool that allows you to identify, extract and analyze firmware, system images and other complex binaries. It is widely used in cybersecurity, reverse engineering and IoT device analysis.
 
-## Come Funziona
+## How It Works
 
-Binwalk scansiona i file binari cercando:
-- **Magic bytes** (signature) che identificano tipi di file incorporati
-- **Entropy dei dati** per trovare sezioni compresse o crittografate
-- **Filesystem** come JFFS2, SquashFS, YAFFS2
-- **Bootloader** e kernel Linux embedded
-- **Archivi** compressi (ZIP, GZIP, LZMA, etc.)
+Binwalk scans binary files for:
+- **Magic bytes** (signatures) that identify embedded file types
+- **Data entropy** to find compressed or encrypted sections
+- **Filesystems** such as JFFS2, SquashFS, YAFFS2
+- **Bootloaders** and embedded Linux kernels
+- **Compressed archives** (ZIP, GZIP, LZMA, etc.)
 
-## Utilizzo Base
+## Basic Usage
 
 ```bash
-binwalk firmware.bin         # Scansione semplice
-binwalk -e firmware.bin      # Estrazione automatica
-binwalk -Me firmware.bin     # Scansione + estrazione ricorsiva
+binwalk firmware.bin # Simple scan
+binwalk -e firmware.bin # Automatic extraction
+binwalk -Me firmware.bin # Recursive scan + extraction
 ```
 
-## Parametri Essenziali
+## Essential Parameters
 
-| Parametro | Descrizione |
+| Parameter | Description |
 |-----------|-------------|
-| `-B` | Scansiona solo signature principali |
-| `-E` | Mostra entropy dei dati (utile per trovare sezioni crittografate) |
-| `-H` | Output in formato esadecimale |
-| `-A` | Scansiona per opcodes e codice |
-| `-g <pattern>` | Cerca pattern specifici nel file |
-| `-e` | Estrae automaticamente i file trovati |
-| `-M` | Scansione ricorsiva sui file estratti |
-| `-C <dir>` | Specifica directory di output |
-| `-Z` | Comprimi i file estratti |
-| `-t <types>` | Include solo tipi specifici (es: `-t filesystem`) |
-| `-x <types>` | Esclude tipi specifici (es: `-x jpeg,png`) |
-| `-y <types>` | Mostra solo tipi specifici |
-| `-v` | Output verbose (più dettagli) |
-| `-q` | Output silenzioso |
-| `-f <file>` | Salva risultati su file |
-| `--log=<file>` | File di log dettagliato |
-
+| `-B` | Scan only main signatures |
+| `-E` | Show entropy of data (useful for finding encrypted sections) |
+| `-H` | Output in hexadecimal format |
+| `-A` | Scan for opcodes and code |
+| `-g <pattern>` | Search for specific patterns in the file |
+| `-e` | Automatically extract found files |
+| `-M` | Recursive scan over extracted files |
+| `-C <dir>` | Specify output directory |
+| `-Z` | Compress extracted files |
+| `-t <types>` | Include only specific types (eg: `-t filesystem`) |
+| `-x <types>` | Exclude specific types (eg: `-x jpeg,png`) |
+| `-y <types>` | Show only specific types |
+| `-v` | Verbose output (more details) |
+| `-q` | Silent output |
+| `-f <file>` | Save results to file |
+| `--log=<file>` | Verbose log file |
 
 ```
