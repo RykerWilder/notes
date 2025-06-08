@@ -2,7 +2,7 @@
 
 Binwalk is a binary file analysis tool that allows you to identify, extract and analyze firmware, system images and other complex binaries. It is widely used in cybersecurity, reverse engineering and IoT device analysis.
 
-## How It Works
+## How Binwalk Works
 
 Binwalk scans binary files for:
 - **Magic bytes** (signatures) that identify embedded file types
@@ -14,9 +14,9 @@ Binwalk scans binary files for:
 ## Basic Usage
 
 ```bash
-binwalk firmware.bin # Simple scan
-binwalk -e firmware.bin # Automatic extraction
-binwalk -Me firmware.bin # Recursive scan + extraction
+binwalk firmware.bin        # Simple scan
+binwalk -e firmware.bin     # Automatic extraction
+binwalk -Me firmware.bin    # Recursive scan + extraction
 ```
 
 ## Essential Parameters
