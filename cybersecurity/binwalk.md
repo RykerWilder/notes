@@ -21,53 +21,29 @@ binwalk -Me firmware.bin     # Scansione + estrazione ricorsiva
 
 ## Parametri Essenziali
 
-### Scansione e Analisi
-- `-B` - Scansiona solo signature principali
-- `-E` - Mostra entropy dei dati (utile per trovare sezioni crittografate)
-- `-H` - Output in formato esadecimale
-- `-A` - Scansiona per opcodes e codice
-- `-g <pattern>` - Cerca pattern specifici nel file
+| Parametro | Descrizione |
+|-----------|-------------|
+| `-B` | Scansiona solo signature principali |
+| `-E` | Mostra entropy dei dati (utile per trovare sezioni crittografate) |
+| `-H` | Output in formato esadecimale |
+| `-A` | Scansiona per opcodes e codice |
+| `-g <pattern>` | Cerca pattern specifici nel file |
+| `-e` | Estrae automaticamente i file trovati |
+| `-M` | Scansione ricorsiva sui file estratti |
+| `-C <dir>` | Specifica directory di output |
+| `-Z` | Comprimi i file estratti |
+| `-t <types>` | Include solo tipi specifici (es: `-t filesystem`) |
+| `-x <types>` | Esclude tipi specifici (es: `-x jpeg,png`) |
+| `-y <types>` | Mostra solo tipi specifici |
+| `-v` | Output verbose (più dettagli) |
+| `-q` | Output silenzioso |
+| `-f <file>` | Salva risultati su file |
+| `--log=<file>` | File di log dettagliato |
 
-### Estrazione
-- `-e` - Estrae automaticamente i file trovati
-- `-M` - Scansione ricorsiva sui file estratti
-- `-C <dir>` - Specifica directory di output
-- `-Z` - Comprimi i file estratti
 
-### Filtraggio
-- `-t <types>` - Include solo tipi specifici (es: `-t filesystem`)
-- `-x <types>` - Esclude tipi specifici (es: `-x jpeg,png`)
-- `-y <types>` - Mostra solo tipi specifici
-
-### Output e Debug
-- `-v` - Output verbose (più dettagli)  
-- `-q` - Output silenzioso
-- `-f <file>` - Salva risultati su file
-- `--log=<file>` - File di log dettagliato
-
-## Esempi Pratici
-
-```bash
-# Analisi completa con estrazione ricorsiva
-binwalk -Me firmware.bin
-
-# Analisi entropy per trovare dati crittografati  
-binwalk -E firmware.bin
-
-# Estrazione in directory specifica con log
-binwalk -e -C /tmp/extracted --log=scan.log firmware.bin
-
-# Cerca solo filesystem
-binwalk -t filesystem firmware.bin
-
-# Cerca stringhe specifiche
-binwalk -g "admin\|password" firmware.bin
-
-# Combina entropy + estrazione + ricorsiva
-binwalk -EMe firmware.bin
 ```
 
-## Output Tipico
+### Output Tipico
 
 ```
 DECIMAL       HEXADECIMAL     DESCRIPTION
@@ -77,11 +53,3 @@ DECIMAL       HEXADECIMAL     DESCRIPTION
 1441116       0x15FE5C        Linux kernel version 2.6.21.7
 1454296       0x1631D8        gzip compressed data, maximum compression
 ```
-
-## Consigli Rapidi
-
-- Usa sempre `-M` per scansioni ricorsive complete
-- `-E` aiuta a identificare sezioni crittografate (alta entropy)
-- Combina parametri: `-EMe` per analisi complete  
-- Salva sempre log con `--log=` per analisi successive
-- Usa `-C` per organizzare output in directory separate
