@@ -28,6 +28,7 @@
 - **[John The Ripper](./cybersecurity/john-the-ripper.md)**
 - **[Steghide](./cybersecurity/steghide.md)**
 - **[Hydra](./cybersecurity/hydra.md)**
+- **[Binwalk](./cybersecurity/binwalk.md)**
 
 ---
 
