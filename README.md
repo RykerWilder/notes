@@ -29,6 +29,7 @@
 - **[Steghide](./cybersecurity/steghide.md)**
 - **[Hydra](./cybersecurity/hydra.md)**
 - **[Binwalk](./cybersecurity/binwalk.md)**
+- **[Dirbuster](./cybersecurity/dirbuster.md)**
 
 ---
 
