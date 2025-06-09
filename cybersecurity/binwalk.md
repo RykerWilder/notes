@@ -11,7 +11,7 @@ Binwalk scans binary files for:
 - **Bootloaders** and embedded Linux kernels
 - **Compressed archives** (ZIP, GZIP, LZMA, etc.)
 
-## Basic Usage
+## Basic Commands
 
 ```bash
 binwalk firmware.bin        # Simple scan
