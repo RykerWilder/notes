@@ -8,12 +8,15 @@ DirBuster funziona inviando richieste HTTP a un server web per testare l'esisten
 
 ## Utilizzo Base
 
-### Interfaccia Grafica
 ```bash
-dirbuster
+dirb http://target.com # Scansione con wordlist predefinita
+dirb http://target.com /usr/share/wordlists/dirb/common.txt # Scansione con wordlist personalizzata
+dirb http://target.com /usr/share/wordlists/dirb/common.txt -X .php,.html,.txt # Scansione con estensioni specifiche
+dirb http://target.com -u username:password # Autenticazione HTTP Basic
+dirb http://target.com -c "SESSIONID=abc123" # Utilizzare cookies
+dirb http://target.com -H "User-Agent: Mozilla/5.0" # Header personalizzati
+dirb http://target.com -R # Scansione ricorsiva
+dirb http://target.com -p http://127.0.0.1:8080 # Utilizzare proxy
 ```
 
-### Modalità Command Line
-```bash
-dirb http://target.com /usr/share/wordlists/dirb/common.txt
-```
+
