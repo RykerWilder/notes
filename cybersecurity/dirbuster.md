@@ -2,25 +2,25 @@
 
 DirBuster is a web directory and file enumeration tool developed by OWASP. It is designed to find hidden directories and files on web servers through brute force attacks using predefined or custom wordlists.
 
-## How It Works
+## How Dirbuster Works
 
 DirBuster works by sending HTTP requests to a web server to test the existence of directories and files based on lists of common names. The tool analyzes the server's responses to determine whether a resource exists or not.
 
-## Basic Usage
+## Basic Commands
 
 ```bash
-dirb http://target.com # Scan with default wordlist
-dirb http://target.com /usr/share/wordlists/dirb/common.txt # Scan with custom wordlist
+dirb http://target.com                                         # Scan with default wordlist
+dirb http://target.com /usr/share/wordlists/dirb/common.txt    # Scan with custom wordlist
 dirb http://target.com /usr/share/wordlists/dirb/common.txt -X .php,.html,.txt # Scan with specific extensions
-dirb http://target.com -u username:password # HTTP Basic Authentication
-dirb http://target.com -c "SESSIONID=abc123" # Use cookies
-dirb http://target.com -H "User-Agent: Mozilla/5.0" # Custom headers
-dirb http://target.com -R # Recursive scanning
-dirb http://target.com -p http://127.0.0.1:8080 # Use proxy
+dirb http://target.com -u username:password                    # HTTP Basic Authentication
+dirb http://target.com -c "SESSIONID=abc123"                   # Use cookies
+dirb http://target.com -H "User-Agent: Mozilla/5.0"            # Custom headers
+dirb http://target.com -R                                      # Recursive scanning
+dirb http://target.com -p http://127.0.0.1:8080                # Use proxy
 ```
 
 ## Parameters
-| Parameter | Description | Example Values ​​|
+| Parameter | Description | Values ​​|
 |--------------------|-------------------------------------------------------------------------------------------------|---------------------------------------|
 | `-u` / `--url` | URL of the target to scan | `http://example.com` |
 | `-l` / `--wordlist` | Path to the wordlist file containing the directories/files to test | `/usr/share/wordlists/dirb/common.txt`|
