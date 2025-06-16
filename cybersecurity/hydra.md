@@ -13,19 +13,6 @@ Hydra is an open-source penetration testing tool used to perform brute-force att
 - **Red Team Operations**: Simulating real-world attacks  
 
 
-## Supported Protocols
-
-Hydra supports over 50 protocols, including:
-
-- **Web**: HTTP, HTTPS, HTTP-FORM, HTTP-GET, HTTP-POST
-- **Database**: MySQL, PostgreSQL, Microsoft SQL, Oracle, MongoDB
-- **Remote Access**: SSH, Telnet, RDP, VNC
-- **Mail**: POP3, IMAP, SMTP
-- **File Transfer**: FTP, FTPS, SFTP
-- **Directory Services**: LDAP, SMB, Kerberos
-- **Altri**: SNMP, Cisco, RouterOS, Redis, ecc.
-
-
 ## General Syntax
 
 ```bash
