@@ -35,6 +35,7 @@
 ---
 
 ## Linux
+- **[Linux file system](./linux/file-system.md)**
 - **[Linux base commands](./linux/linux-commands.md)**
 - **[How to install and customize kitty](./linux/kitty.md)**
 
