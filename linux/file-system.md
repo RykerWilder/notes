@@ -2,12 +2,9 @@
 
 ![linux file system](../img/linux-file-system.png)
 
-Il file system di Linux è organizzato in una struttura gerarchica ad albero, che inizia dalla **root** (indicata con `/`). Ogni elemento (file, directory, dispositivo) è accessibile partendo da questa radice. Ecco una spiegazione dettagliata delle directory principali e del loro funzionamento:
+Il file system di Linux è organizzato in una struttura gerarchica ad albero, che inizia dalla **root** (indicata con `/`). Ogni elemento (file, directory, dispositivo) è accessibile partendo da questa radice.
 
 ---
-
-## **1. Struttura gerarchica del file system**
-Ecco le directory principali e il loro scopo:
 
 ### **`/` (Root)**
 - È la directory radice, da cui partono tutte le altre.
@@ -77,52 +74,3 @@ Ecco le directory principali e il loro scopo:
   - `/var/cache`: cache delle applicazioni.
   - `/var/spool`: code di stampa, email.
   - `/var/www`: file dei siti web (se si usa Apache/Nginx).
-
----
-
-## **2. Come funziona il file system?**
-- **Tutto è un file**: file, directory, dispositivi, socket sono rappresentati come file.
-- **Case-sensitive**: `/home` è diverso da `/Home`.
-- **Percorsi assoluti e relativi**:
-  - Assoluto: inizia con `/` (es. `/home/mario/file.txt`).
-  - Relativo: parte dalla directory corrente (es. `./script.sh` o `../altro/file`).
-- **Mount point**: i dispositivi esterni (USB, dischi) vengono "montati" in una directory (es. `/media/usb`).
-
----
-
-## **3. Permessi e proprietà**
-Ogni file/directory ha:
-- **Proprietario** (user) e **gruppo**.
-- **Permessi** in 3 gruppi: proprietario, gruppo, altri (lettura/scrittura/esecuzione).
-
-Esempio:
-```bash
--rw-r--r-- 1 mario users 1024 Jun 10 10:00 file.txt
-```
-- `-`: tipo (file normale).
-- `rw-`: proprietario può leggere/scrivere.
-- `r--`: gruppo può solo leggere.
-- `r--`: altri possono solo leggere.
-
----
-
-## **4. File system più comuni in Linux**
-- **ext4** (quello più usato, journaling).
-- **XFS** (per grandi file, alta performance).
-- **Btrfs** (con funzionalità avanzate come snapshot).
-- **ZFS** (usato in server, supporta checksum e deduplica).
-
----
-
-## **5. Comandi utili per esplorare il file system**
-- `ls` - Lista file.
-- `cd` - Cambia directory.
-- `pwd` - Mostra la directory corrente.
-- `df -h` - Spazio su disco.
-- `mount` - Mostra i dispositivi montati.
-- `tree` - Visualizza la struttura ad albero.
-
----
-
-### **Conclusione**
-Il file system Linux è progettato per essere **logico e organizzato**, con ogni directory che ha uno scopo preciso. Sapere come è strutturato aiuta a navigare, risolvere problemi e amministrare il sistema in modo efficiente. 🚀
