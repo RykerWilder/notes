@@ -400,6 +400,27 @@ ip link set eth0 up/down   # Enable/disable network interface
 
 These commands show IP addresses, MAC addresses, transmission statistics, and other network parameters. They're essential for configuring network interfaces, diagnosing network issues, and monitoring network activity.
 
+### traceroute
+The `traceroute` command traces the path packets take to reach a destination on a network, displaying each "hop" (router/intermediary) along the way. It is useful for diagnosing connectivity, latency, or routing issues.
+
+```bash
+traceroute example.com           # Trace the route to example.com
+traceroute -n 8.8.8.8            # Disable DNS resolution (display IP only)
+traceroute -I example.com        # Use ICMP (ping-like) instead of UDP (Linux)
+traceroute -q 3 example.com      # Set 3 probes per hop (default: 3)
+traceroute -m 20 example.com     # Set a maximum of 20 hops (default: 30)
+traceroute -w 1 example.com      # Timeout of 1 second for each response
+```
+
+### systemctl
+The `systemctl` command is the primary tool for managing the systemd init system on Linux, which controls services, units, system startup, and more. It's essential for administering services, enabling them to start, or troubleshooting problems.
+
+```bash
+systemctl start [service]   # Start a service
+systemctl stop [service]    # Stop a service
+systemctl status [service]  # Show a service status
+```
+
 ### ssh (Secure Shell)
 The `ssh` command establishes secure encrypted connections to remote systems, allowing secure remote login, command execution, and file transfers. It's the standard tool for managing remote Linux/Unix systems.
 
