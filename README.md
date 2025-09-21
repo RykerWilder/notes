@@ -31,6 +31,7 @@
 - **[Medusa](./cybersecurity/medusa.md)**
 - **[Binwalk](./cybersecurity/binwalk.md)**
 - **[Dirbuster](./cybersecurity/dirbuster.md)**
+- **[Bruce Firmware Tools](./cybersecurity/bruce-firmware.md)**
 
 ---
 
