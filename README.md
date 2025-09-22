@@ -18,8 +18,8 @@
 
 ---
 
-## Rust
-- **[Rust Fundamentals](./rust/rust-fundamentals.md)**
+## Bash
+- **[Bash fundamentals](./bash/fundamentals.md)**
 
 ---
 
@@ -66,3 +66,8 @@
 
 - **[CSS Masking](./css/css-masking.md)**
 - **[CSS Reflect Effect](./css/css-reflect.effect.md)**
+
+---
+
+## Rust
+- **[Rust Fundamentals](./rust/rust-fundamentals.md)**
